@@ -4,5 +4,9 @@ font-family: "Fraunces", serif;
 */
 
 body {
-  background-color: violet;
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 14px;
+
+  background-color: hsl(30, 38%, 92%);
 }
