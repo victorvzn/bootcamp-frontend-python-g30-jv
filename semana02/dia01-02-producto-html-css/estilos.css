@@ -26,4 +26,19 @@ main {
   border: 1px solid red;
 
   width: 650px;
+
+  display: flex;
+
+  min-height: 400px;
+}
+
+.photo {
+  width: 350px;
+
+  background-image: url(images/image-product-desktop.jpg);
+  background-size: cover;
+}
+
+.content {
+  width: 300px;
 }
