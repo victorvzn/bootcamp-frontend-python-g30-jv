@@ -41,4 +41,37 @@ main {
 
 .content {
   width: 300px;
+
+  padding: 28px; /* 14px x 2 = 28px */
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 21px; /* 14px + 7px */
+
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* TODO: Terminar con los estilos de las etiquetas h2 y p aplicando colores, fuentes y tamños de letra */
+
+.content h2 {
+  /* border: 1px solid red; */
+
+  margin: 0;
+}
+
+.content h1 {
+  /* border: 1px solid blue; */
+
+  margin: 0; /* Resetea el margen por defecto del h1 */
+
+  color: hsl(158, 42%, 18%);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+
+.content p {
+  /* border: 1px solid green; */
+
+  margin: 0;
 }
