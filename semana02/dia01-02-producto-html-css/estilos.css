@@ -29,7 +29,7 @@ main {
 
   display: flex;
 
-  min-height: 400px;
+  min-height: 600px;
 }
 
 .photo {
@@ -84,4 +84,27 @@ main {
   color: hsl(228, 12%, 48%);
   font-weight: 500;
   line-height: 1.5;
+}
+
+.content div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.content span {
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+
+.content s {
+  color: hsl(228, 12%, 48%);
+}
+
+/* TODO: Agregar los stilos del botón add to cart */
+
+.content button {
+  
 }
