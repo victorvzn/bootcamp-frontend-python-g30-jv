@@ -25,6 +25,16 @@ img {
   border-radius: 15px;
 }
 
+/* picture {
+  border-radius: 15px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+} */
+
 h1 {
   font-size: 20px;
   color: hsl(218, 44%, 22%);
