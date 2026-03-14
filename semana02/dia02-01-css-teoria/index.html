@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teoría CSS</title>
+  <style>
+    /* Pseudo clases */
+
+    /* Actual cuando el usuario interactúa con un elemento */
+
+    button {
+      background-color: red;
+    }
+
+    button:hover {
+      background-color: yellow;
+    }
+
+    /* Pseudo elementos */
+
+    /* Permiten crear partes virtuales de un elemento */
+
+    p {
+      color: blue;
+    }
+
+    p:before {
+      content: '🧠 X';
+      color: green;
+    }
+
+    p:after {
+      content: '🎅';
+    }
+
+    /* SELECTORES COMBINADOS */
+
+    /* Selector descendiente */
+
+    article {
+      background-color: aquamarine;
+    }
+
+    article h2 {
+      color: orange;
+    }
+    
+    article strong {
+      color: peru;
+    }
+
+    /* selector de múltilpes selectores */
+
+    h1, h3, em {
+      border: 5px solid salmon;
+    }
+  </style>
+</head>
+<body>
+  <button>Click aquí!</button>
+
+  <p>Texto especial</p>
+
+  <article>
+    <h2>Bienvenido</h2>
+
+    <strong>Hola a todos</strong>
+  </article>
+
+  <section>
+    <h1>Título</h1>
+    <h2>Subtitulo</h2>
+
+    <strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi placeat dicta quo cumque magni expedita inventore vel facilis fugit quos aliquid modi officiis, eligendi earum ipsam amet maxime! Ut, vel.</strong>
+    <em>texto con enfasis</em>
+    <a href="">Soy un link</a>
+  </section>
+</body>
+</html>
