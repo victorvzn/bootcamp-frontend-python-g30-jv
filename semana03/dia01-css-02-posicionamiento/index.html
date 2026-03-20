@@ -7,15 +7,31 @@
   <style>
     .relative {
       background-color: lightblue;
+      position: relative;
+      top: 100px;
+      left: 100px;
     }
 
     .absolute {
       background-color: lightsalmon;
+    }
+    .pruebarelativepadre {
+      border: 1px solid red;
+    }
+    .pruebaconrelative {
+      background-color: aqua;
+      position: relative;
+      top: -10px;
+      left: 10px;
     }
   </style>
 </head>
 <body>
   <div class="relative">Contenido relativo a mi posición</div>
   <div class="absolute">Me posiciono encima</div>
+
+  <div class="pruebarelativepadre">
+    <div class="pruebaconrelative">pruebaconrelative</div>
+  </div>
 </body>
 </html>
