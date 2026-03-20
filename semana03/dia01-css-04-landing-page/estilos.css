@@ -2,3 +2,45 @@
 font-family: "Raleway", sans-serif;
 font-family: "Open Sans", sans-serif;
 */
+
+/* GENERALES */
+
+/* Selector universal */
+* {
+  /* border: 1px solid yellow; */
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+
+  color: hsl(0, 0%, 100%);
+
+  background-color: hsl(218, 28%, 13%);
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+img {
+  /* TODO: RWD(RESPONSIVE WEB DESIGN) para imágenes */
+}
+
+/* UTILITARIOS */
+
+.hidden {
+  display: none;
+}
+
+/* HEADER */
+
+/* HERO */
+
