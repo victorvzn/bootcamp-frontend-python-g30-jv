@@ -43,6 +43,23 @@
       padding: 10px;
       z-index: 3;
     }
+    .ejemplo-relative {
+      position: relative;
+      background-color: lightseagreen;
+
+      padding: 10px;
+
+      width: 200px;
+      height: 300px;
+    }
+
+    .ejemplo-absolute {
+      position: absolute;
+      top: 40px;
+      left: 50px;
+
+      background-color: yellow;
+    }
   </style>
 </head>
 <body>
@@ -52,6 +69,12 @@
 
   <div class="pruebarelativepadre">
     <div class="pruebaconrelative">pruebaconrelative</div>
+  </div>
+
+  <div class="ejemplo-relative">
+    <div class="ejemplo-absolute">
+      Texto que se posiciona donde quiera dentro de .ejemplo-relative
+    </div>
   </div>
 
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione consequuntur explicabo perspiciatis nihil voluptate rerum iusto similique veniam porro unde, nobis commodi iste optio tempore provident nostrum fuga doloremque at?</p>
