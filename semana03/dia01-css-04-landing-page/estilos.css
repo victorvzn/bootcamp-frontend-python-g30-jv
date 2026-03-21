@@ -116,7 +116,7 @@ img {
 /* TODO: maquetar esta sección con HTML y CSS */
 
 .features {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: grid;
   grid-template-columns: 340px 340px;
@@ -144,4 +144,10 @@ img {
 
 .feature__text {
   text-align: center;
+}
+
+/* TODO: Terminar la sección collaboration */
+
+.collaboration {
+  border: 1px solid red;
 }
