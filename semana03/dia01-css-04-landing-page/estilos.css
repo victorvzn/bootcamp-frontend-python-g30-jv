@@ -103,7 +103,11 @@ img {
   border: none;
   border-radius: 7rem;
   padding: 1rem;
-  min-width: 160px;
+  min-width: 260px;
   color: white;
   background-color: hsl(198, 60%, 50%);
 }
+
+/* FEATURES SECTION */
+
+/* TODO: maquetar esta sección con HTML y CSS */
