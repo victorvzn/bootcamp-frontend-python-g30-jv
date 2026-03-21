@@ -51,7 +51,7 @@ img {
   justify-content: space-between;
   align-items: center;
 
-  width: 1440px;
+  width: 1440px; /* TODO: Adaptar el ancho a dispositivos más pequeños */
   margin: 0 auto;
 
   padding-top: 42px;
@@ -59,7 +59,9 @@ img {
 
 .header__nav {
   /* TODO: Terminar el css de esta navegación */
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 42px; /* 42px = 14 * 3 */
 }
 
 /* HERO */
