@@ -51,7 +51,7 @@ img {
   justify-content: space-between;
   align-items: center;
 
-  width: 1440px; /* TODO: Adaptar el ancho a dispositivos más pequeños */
+  width: min(100% - 3rem, 1440px); /* TODO: Adaptar el ancho a dispositivos más pequeños */
   margin: 0 auto;
 
   padding-top: 42px;
@@ -69,7 +69,7 @@ img {
 /*  REM: Root EM(Ancho de la letra M) */
 
 .hero {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: flex;
   flex-direction: column;
@@ -78,11 +78,11 @@ img {
 }
 
 .hero__title {
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 
   /* width: 720px; */
   /* min: Elige el valor más pequeño entre los que le pasemos */
-  width: min(100%, 720px);
+  width: min(100% - 3rem, 720px);
 
   font-family: "Raleway", sans-serif;
   font-size: 2.5rem; /* 14px * 2.5 = 35px */
