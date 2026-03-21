@@ -150,4 +150,15 @@ img {
 
 .collaboration {
   border: 1px solid red;
+
+  display: flex;
+
+  gap: 3rem;
+}
+
+.productive {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
 }
