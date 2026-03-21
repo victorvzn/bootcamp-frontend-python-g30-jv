@@ -98,5 +98,12 @@ img {
 }
 
 .hero__button {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+
+  border: none;
+  border-radius: 7rem;
+  padding: 1rem;
+  min-width: 160px;
+  color: white;
+  background-color: hsl(198, 60%, 50%);
 }
