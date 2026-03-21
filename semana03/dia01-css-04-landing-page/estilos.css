@@ -32,6 +32,8 @@ a {
 
 img {
   /* TODO: RWD(RESPONSIVE WEB DESIGN) para imágenes */
+  max-width: 100%; /* La imagen nunca será más grande que su contenedor */
+  height: auto;
 }
 
 /* UTILITARIOS */
