@@ -13,7 +13,7 @@ font-family: "Open Sans", sans-serif;
 }
 
 html {
-  font-size: 14px;
+  font-size: 14px; /* 16px es el valor por defecto */
 }
 
 body {
@@ -61,8 +61,32 @@ img {
   /* TODO: Terminar el css de esta navegación */
   /* border: 1px solid red; */
   display: flex;
-  gap: 42px; /* 42px = 14 * 3 */
+  gap: 42px; /* 42px = 14 * 3 = 3rem */
 }
 
-/* HERO */
+/* HERO SECTION */
 
+/*  REM: Root EM(Ancho de la letra M) */
+
+.hero {
+  border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; /* 14px * 2 = 28px = 2rem */
+}
+
+.hero__title {
+  border: 1px solid yellow;
+
+  /* width: 720px; */
+  /* min: Elige el valor más pequeño entre los que le pasemos */
+  width: min(100%, 720px);
+
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem; /* 14px * 2.5 = 35px */
+  font-weight: 700; /* por defecto */
+
+  text-align: center;
+}
