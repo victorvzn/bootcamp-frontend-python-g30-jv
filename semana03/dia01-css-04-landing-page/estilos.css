@@ -77,6 +77,9 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 2rem; /* 14px * 2 = 28px = 2rem */
+
+  padding-top: 3rem;
+  padding-bottom: 12rem; /* 168px */
 }
 
 .hero__title {
@@ -111,3 +114,34 @@ img {
 /* FEATURES SECTION */
 
 /* TODO: maquetar esta sección con HTML y CSS */
+
+.features {
+  border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: 340px 340px;
+  grid-template-rows: 240px 240px;
+  justify-content: center;
+  gap: 5rem; /* 5rem = 14 * 5 = 70px */
+}
+
+.feature {
+  /* border: 1px solid yellow; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* 14px = 1rem */
+}
+
+.feature__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+
+  text-align: center;
+}
+
+.feature__text {
+  text-align: center;
+}
