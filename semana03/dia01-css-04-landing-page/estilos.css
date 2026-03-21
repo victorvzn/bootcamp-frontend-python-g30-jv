@@ -42,6 +42,11 @@ img {
   display: none;
 }
 
+.wrapper {
+  width: min(100% - 3rem, 1440px); /* TODO: Adaptar el ancho a dispositivos más pequeños */
+  margin: 0 auto;
+}
+
 /* HEADER */
 
 .header {
@@ -50,10 +55,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  width: min(100% - 3rem, 1440px); /* TODO: Adaptar el ancho a dispositivos más pequeños */
-  margin: 0 auto;
-
+  
   padding-top: 42px;
 }
 
@@ -89,4 +91,12 @@ img {
   font-weight: 700; /* por defecto */
 
   text-align: center;
+}
+
+.hero__text {
+  text-align: center;
+}
+
+.hero__button {
+  border: 1px solid red;
 }
