@@ -57,6 +57,8 @@ img {
   align-items: center;
   
   padding-top: 42px;
+
+  background-color: hsl(217, 28%, 15%);
 }
 
 .header__logo {
@@ -84,6 +86,19 @@ img {
 
   padding-top: 3rem;
   padding-bottom: 12rem; /* 168px */
+
+  background-image: url(images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  background-color: hsl(217, 28%, 15%);
+}
+
+@media (min-width: 992px) {
+  .hero {
+    background-image: url(images/bg-curvy-desktop.svg);
+  }
 }
 
 .hero__title {
