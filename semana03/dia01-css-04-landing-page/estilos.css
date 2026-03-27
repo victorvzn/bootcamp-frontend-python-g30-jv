@@ -191,3 +191,28 @@ img {
 }
 
 /* TESTIMONIALS SECTION */
+
+.testimonials {
+  /* border: 1px solid yellow; */
+
+  padding-top: 8rem;
+  padding-bottom: 18rem;
+}
+
+.testimonials--wrapper {
+  /* border: 1px solid red; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.testimonial {
+  
+  width: 23rem;
+  /* padding: TOP RIGHT BOTTOM LEFT */
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: hsl(219, 30%, 18%);  
+}
