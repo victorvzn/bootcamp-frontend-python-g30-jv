@@ -59,6 +59,10 @@ img {
   padding-top: 42px;
 }
 
+.header__logo {
+  width: 10rem;
+}
+
 .header__nav {
   /* TODO: Terminar el css de esta navegación */
   /* border: 1px solid red; */
@@ -119,10 +123,28 @@ img {
   /* border: 1px solid red; */
 
   display: grid;
-  grid-template-columns: 340px 340px;
-  grid-template-rows: 240px 240px;
+  grid-template-columns: 340px;
+  grid-template-rows: 240px;
   justify-content: center;
   gap: 5rem; /* 5rem = 14 * 5 = 70px */
+}
+
+/*
+TAMAÑOS DE PANTALLA SUGERIDOS:
+
+576px  -> pantallas pequeñas (celulares)
+768px  -> pantallas pequeñas (tablets y celulares)
+992px  -> pantallas medianas (Desktop)
+1280px -> pantallas grandes (Desktops, TVs)
+*/
+
+/* MEDIA QUERY: Se aplica a dispositivos móviles, tables o desktops+ */
+
+@media (min-width: 992px) {
+  .features {
+    grid-template-columns: 340px 340px;
+    grid-template-rows: 240px 240px;
+  }
 }
 
 .feature {
@@ -152,12 +174,19 @@ img {
   /* border: 1px solid red; */
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   gap: 4rem;
 
   padding-top: 8rem;
+}
+
+@media (min-width: 992px) {
+  .collaboration {
+    flex-direction: row;
+  }
 }
 
 .productive {
@@ -209,6 +238,10 @@ img {
   gap: 2rem;
 }
 
+@media (min-width: 992px) {
+  /* TODO: Organizar correctamente los testimonios en dispositivos móviles */
+}
+
 .testimonial {
   width: 23rem;
   /* padding: TOP RIGHT BOTTOM LEFT */
@@ -239,3 +272,4 @@ img {
 .testimonial__info h5 {
   font-weight: 400;
 }
+
