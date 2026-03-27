@@ -168,5 +168,14 @@ img {
 }
 
 .productive__title {
-  
+  font-family: "Raleway", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.productive__text {
+}
+
+.productive__link {
+  border: 1px solid red;
 }
