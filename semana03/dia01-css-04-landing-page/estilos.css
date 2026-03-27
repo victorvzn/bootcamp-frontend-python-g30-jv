@@ -177,5 +177,17 @@ img {
 }
 
 .productive__link {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: hsl(176, 68%, 64%);
+
+  border-bottom: 1px solid hsl(176, 68%, 64%);
+
+  width: 10.8rem;
+  padding-bottom: 0.2rem;
 }
+
+/* TESTIMONIALS SECTION */
