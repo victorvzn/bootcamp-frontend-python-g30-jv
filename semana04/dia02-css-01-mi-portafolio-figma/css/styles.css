@@ -100,41 +100,53 @@ a {
 /* HERO SECTION */
 
 .hero {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   padding: 4rem;
+
+  text-align: center;
 }
 
 /* TODO: Añadir la imagen de fondo(background) en la parte inferior sin repetirse usando la funcion url */
 
 .hero--bg {
-  
+  background-image: url(../images/bg.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
 }
 
 /* TODO: Añadir los estilos a las siguientes clases para la sección .hero  */
 
 .hero__gretting {
-
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: capitalize;
 }
 
 .hero__gretting span {
-  color: red;
+  color: var(--primary-color-gold);
+  text-decoration: underline;
 }
 
 .hero__title {
-
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: capitalize;
 }
 
 .hero__description {
-
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-regular);
+  text-transform: capitalize;
 }
 
 .hero__photo {
-
+  border-radius: 50%;
 }
 
 .stack {
