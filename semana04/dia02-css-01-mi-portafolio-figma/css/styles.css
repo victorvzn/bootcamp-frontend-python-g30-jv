@@ -42,3 +42,45 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* UTILS */
+
+.wrapper {
+  width: min(100% - 3rem, 1440px);
+
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* HEADER SECTION */
+
+.header {
+  border: 1px solid red;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.header__logo {
+  color: var(--primary-color-gold);
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.header__menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header__menu {
+    display: flex;
+    gap: 1.5rem; /* 1.5rem <> 24px <> 16px x 1.5 */
+  }
+}
