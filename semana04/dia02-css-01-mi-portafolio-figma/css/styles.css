@@ -96,3 +96,78 @@ a {
   /* text-decoration: underline; */
   border-bottom: 2px solid var(--primary-color-gold);
 }
+
+/* HERO SECTION */
+
+.hero {
+  border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 4rem;
+}
+
+.hero--bg {
+  
+}
+
+/* TODO: Añadir los estilos a las siguientes clases para la sección .hero  */
+
+.hero__gretting {
+
+}
+
+.hero__gretting span {
+  color: red;
+}
+
+.hero__title {
+
+}
+
+.hero__description {
+
+}
+
+.hero__photo {
+
+}
+
+.stack {
+  border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .stack {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.stack__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stack__title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.stack__box {
+  width: 7rem;
+  height: 7rem;
+
+  background-color: var(--primary-color-blue2);
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
