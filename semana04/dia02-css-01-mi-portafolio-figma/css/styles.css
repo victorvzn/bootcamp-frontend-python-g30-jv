@@ -58,7 +58,7 @@ a {
 /* HEADER SECTION */
 
 .header {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: flex;
   justify-content: space-between;
@@ -83,4 +83,16 @@ a {
     display: flex;
     gap: 1.5rem; /* 1.5rem <> 24px <> 16px x 1.5 */
   }
+}
+
+.header__menu a {
+  font-size: 1.125rem; /* 18rem <> 1.125rem */
+  font-weight: var(--font-weight-semibold);
+  text-transform: capitalize;
+}
+
+.header__menu .header__menu--active {
+  color: var(--primary-color-gold);
+  /* text-decoration: underline; */
+  border-bottom: 2px solid var(--primary-color-gold);
 }
