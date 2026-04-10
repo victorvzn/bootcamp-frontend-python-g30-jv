@@ -82,3 +82,16 @@ edad = 25
 
 console.log(edad)
 
+// 4. Operadores matemáticas
+
+console.log(1 + 3)
+console.log(6 - 5)
+console.log(2 * 8)
+console.log(2 / 8)
+console.log(10 / 2)
+console.log(7 % 2)
+console.log(3 ** 2)
+console.log(Math.pow(3, 2))
+
+// Ejercicio: Dadas dos variables, a con valor 10 y b con valor 3. Realiza una opreación que permita obtener el residuo de la división entre a y b. Luego muestra el resultado en consola.
+
