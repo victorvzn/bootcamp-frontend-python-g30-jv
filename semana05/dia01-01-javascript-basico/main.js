@@ -161,3 +161,56 @@ if (heroe === 'Batman') {
 // TODO: Investiguen la estructura switch
 
 // 9. ESTRUCTURAS REPETITIVAS (FOR, WHILE, DO WHILE)
+
+// for (Sirve para repetir una o varias instrucciones)
+
+// Ejercicio: imprimir en consola los numeros del 0 a 9
+
+// console.log(1)
+// console.log(2)
+// console.log(3)
+// console.log(4)
+// console.log(5)
+// console.log(6)
+// console.log(7)
+// console.log(8)
+// console.log(9)
+
+for (let i = 0; i < 10; i++) {
+  console.log(i)
+}
+
+// while
+
+let j = 0
+
+while (j < 10) {
+  console.log('while', j)
+
+  // j = j + 1
+  j++
+}
+
+// do while
+
+let k = 0
+
+do {
+
+  console.log('do while', k)
+
+  k = k + 1
+  // k++
+} while (k < 10)
+
+// EJERCICIOS
+
+// 1. Definir las variables para hallar el área de un triángulo. Base = 10, Altura = 5.
+
+// 2. Dado un número, mostrar "par y mayor a 10", "par y menor o igual a 10", "Impar"
+
+// 3. Dado un número entero, escribe un programa que:
+// - Muestre "fizzbuzz" si el número es divisible entre 3 y 5.
+// - Muestre "fizz" si el número es divisible solo entre 3.
+// - Muestre "buzz" si el número es divisible solo entre 5.
+// - En cualquier otro caso, debe mostrar el mismo número.
