@@ -132,3 +132,32 @@ console.log(`Hola ${nombre2}, tienes ${edad2} años.`)
 
 // 8. Condicionales (if)
 
+let numero = 4
+
+if (numero % 2 === 0) {
+  console.log('Es par')
+}
+
+let nota = 17
+
+if (nota >= 13) {
+  console.log('Aprobado')
+} else {
+  console.log('Desaprobado')
+}
+
+let heroe = 'Spiderman'
+
+if (heroe === 'Batman') {
+  console.log('Hola soy Bruce')
+} else if (heroe === 'Spiderman') {
+  console.log('Hola soy Peter')
+} else if (heroe === 'Ironman') {
+  console.log('Hola soy Tony')
+} else {
+  console.log('No soy un heroe 😉')
+}
+
+// TODO: Investiguen la estructura switch
+
+// 9. ESTRUCTURAS REPETITIVAS (FOR, WHILE, DO WHILE)
