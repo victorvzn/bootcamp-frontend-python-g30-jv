@@ -214,3 +214,76 @@ do {
 // - Muestre "fizz" si el número es divisible solo entre 3.
 // - Muestre "buzz" si el número es divisible solo entre 5.
 // - En cualquier otro caso, debe mostrar el mismo número.
+
+// 10. Funciones
+
+// Una función es un bloque de código reutilizable que hace una tarea.
+
+// ENTRADA -> [ LÓGICA ] -> SALIDA CON EL RESULTADO
+
+// Función básica
+
+function saludar() {
+  console.log('Hola funciones!')
+}
+
+saludar() // Ejecutar la función
+
+// Funciones con parámetros
+
+function saludoConNombre(nombre) {
+  console.log("Hola " + nombre)
+}
+
+saludoConNombre('Victor')
+
+// Funciones que retornan valores
+
+function sumar(a, b) {
+  const suma = a + b
+
+  return suma // Devuelve solo el resultado de lo que se opere
+}
+
+console.log(sumar(2, 3))
+
+let resultado = sumar(5, 8)
+console.log(resultado + 100)
+
+// Ejercicios:
+
+function esPar(numero) {
+  return numero % 2 === 0 // Boolean
+}
+
+console.log(esPar(4)) // true
+console.log(esPar(7)) // false
+
+// 1. Crear una función que reciba un número y devuelva el doble de ese número por consola
+// 2. Crear una función que reciba dos números y devuelva el mayor por consola
+// 3. Reutilizar el ejercicio de fizzBuzz usando funciones de tal forma que puedan llamarlo de la siguiente manera. Ej. fizzBuzz(15) -> fizzbuzz
+
+// 11. Cadena de texto
+
+// Propiedad .length
+
+console.log("Hola".length) // 4
+
+// Acceder a caracteres, cada letra tiene una posición (empieza en 0)
+
+let miNombre = 'Victor'
+
+console.log(miNombre[0]) // V
+console.log(miNombre[1]) // i
+console.log(miNombre[2]) // c
+
+// Métodos importantes
+
+console.log(miNombre.toLowerCase()) // victor
+console.log(miNombre.toUpperCase()) // VICTOR
+console.log(miNombre.includes("ict")) // true
+
+// EJERCICIOS:
+
+// 1. Dado un string, crear una función llamada evaluarTexto que devuelva: "Largo" si tiene más de 10 caracteres y "Corto" si tiene 10 o menos.
+// 2. Dado un string, crear una función llamada invertirTexto que devuelve el texto invertido. Ej. hola -> aloh
