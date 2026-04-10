@@ -95,3 +95,40 @@ console.log(Math.pow(3, 2))
 
 // Ejercicio: Dadas dos variables, a con valor 10 y b con valor 3. Realiza una opreación que permita obtener el residuo de la división entre a y b. Luego muestra el resultado en consola.
 
+const a = 10
+const b = 3
+
+const residuo = a % b
+
+console.log(residuo) // 1
+
+// 5. Comparaciones
+
+// Igualdad débil
+
+console.log(1 == "1") // true (solo compara valor)
+
+// Igualdad estricta (RECOMENDACIón: Usar siempre)
+
+console.log(1 === "1") // false (compara valor y tipo de dato)
+
+// 6. Operadores lógicos (AND, OR, NEGACIÓN)
+
+console.log(true && false) // false
+console.log(true || false) // true
+console.log(!true) // false
+
+// 7. Concatenación (unir textos)
+
+let nombre2 = "Victor"
+let edad2 = 39
+
+console.log("Hola" + nombre2) // HolaVictor
+console.log("Hola " + nombre2) // Hola Victor
+console.log("Hola " + nombre2 + ", tienes " + edad2 + " años") // Hola Victor, tienes 39 años
+
+// Mejor forma de concatenar (template strings) - backtick (alt gr + })
+console.log(`Hola ${nombre2}, tienes ${edad2} años.`)
+
+// 8. Condicionales (if)
+
