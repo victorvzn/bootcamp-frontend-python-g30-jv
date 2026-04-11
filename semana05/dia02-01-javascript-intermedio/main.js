@@ -179,7 +179,8 @@ console.log(miObjetoVacio)
 const persona = {
   nombre: "Guillermo",
   edad: 28,
-  esProgramador: true
+  esProgramador: true,
+  "mi color favorito": 'azúl'
 }
 
 const persona2 = {
@@ -187,3 +188,11 @@ const persona2 = {
   edad: 35,
   esProgramador: false
 }
+
+// Leer los campos de un objeto (notación de punto y de corchete)
+
+console.log(persona.nombre) // Guillermo
+console.log(persona.edad) // 28
+console.log(persona.esProgramador) // true
+console.log(persona.estadoCivil) // undefined
+console.log(persona['mi color favorito']) // azúl
