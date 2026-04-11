@@ -17,3 +17,17 @@ const listaDeValores = [1, 2, 3, 'Victor', 'Villazón', 'Código', true, null, u
 console.log(arregloVacio)
 console.log(listaDeNumeros)
 console.log(listaDeValores)
+
+// Lectura de los elementos de un arreglo
+
+console.log(listaDeValores[0]) // 1
+console.log(listaDeValores[3]) // Victor
+console.log(listaDeValores[5]) // Codigo
+console.log(listaDeValores[6]) // true
+
+// Escritura en un arreglo
+
+listaDeValores[3] = 'Renzo'
+listaDeValores[7] = 9876
+
+console.log(listaDeValores)
