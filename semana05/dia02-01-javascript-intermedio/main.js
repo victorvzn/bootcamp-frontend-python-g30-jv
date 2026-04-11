@@ -115,4 +115,17 @@ const nombreConTitulo = lenguajes.map(function(lenguaje) {
 
 console.log(nombreConTitulo)
 
-// Método SORT, 
+// Método SORT, nos ayuda a ordenar un arreglo de elementos. Muta(cambia) el arreglo original. Usar toSorted() en lugar de sort como recomendación.
+
+// const ordenandoLenguajes = lenguajes.sort() // Sort muta el arreglo original
+const ordenandoLenguajes = lenguajes.toSorted()
+
+console.log(ordenandoLenguajes)
+console.log(lenguajes)
+
+// Método FOREACH, nos ayuda a recorrer un arreglo sin tener ningun retorno de datos
+
+// for(let i = 0; i < 10; i++) {
+//   console.log(i)
+// }
+
