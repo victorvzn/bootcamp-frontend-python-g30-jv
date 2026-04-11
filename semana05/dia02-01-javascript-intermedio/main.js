@@ -199,3 +199,17 @@ console.log(persona.estadoCivil) // undefined
 console.log(persona['mi color favorito']) // azúl
 console.log(persona.coloresFavoritos) // ['rosado', 'rojo', 'azúl']
 console.log(persona.coloresFavoritos[0]) // 'rosado'
+
+// Eliminar propiedades de un objeto
+
+// delete persona2.edad
+persona2.edad = undefined
+
+console.log(persona2)
+
+// Insertar una nueva propiedad a un objeto
+
+persona.platilloFavorito = 'Ceviche de conchas negras'
+persona['juegos favoritos'] = ['Crash Tema Racing', 'Mario', 'Minecraft']
+
+console.log(persona)
