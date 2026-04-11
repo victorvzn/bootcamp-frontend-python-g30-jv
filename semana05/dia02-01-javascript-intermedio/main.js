@@ -31,3 +31,28 @@ listaDeValores[3] = 'Renzo'
 listaDeValores[7] = 9876
 
 console.log(listaDeValores)
+
+// Object.freeze(listaDeValores)
+// listaDeValores[8] = 'Hola a todos'
+// console.log(listaDeValores)
+
+// Insertar nuevos elementos en un arreglo al final (push)
+
+const listaDeNombres = ['Guillermo', 'Renzo', 'Herson']
+
+console.log(listaDeNombres)
+
+listaDeNombres.push('Victor')
+listaDeNombres.push('Julio')
+
+console.log(listaDeNombres)
+
+// Remover elementos del final de un arreglo (pop)
+
+listaDeNombres.pop()
+listaDeNombres.pop()
+listaDeNombres.pop()
+
+console.log(listaDeNombres)
+
+// 
