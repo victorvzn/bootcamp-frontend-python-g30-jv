@@ -160,3 +160,30 @@ const sumatoriaConReduce = numeros.reduce(function(acumulador, valorActual) {
 
 console.log(sumatoriaConReduce)
 
+// OBJETOS, una forma de guardar información en pares de clave: valor.
+
+// Un objeto sirve para agrupar datos relacionados en un solo lugar.
+
+/*
+  {
+    KEY: VALUE,
+    KEY2: VALUE2,
+    KEY3: VALUE3
+  }
+*/
+
+const miObjetoVacio = {}
+
+console.log(miObjetoVacio)
+
+const persona = {
+  nombre: "Guillermo",
+  edad: 28,
+  esProgramador: true
+}
+
+const persona2 = {
+  nombre: "Victor",
+  edad: 35,
+  esProgramador: false
+}
