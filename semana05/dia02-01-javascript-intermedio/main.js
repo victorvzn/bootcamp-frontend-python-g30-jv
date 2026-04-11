@@ -102,3 +102,6 @@ const resultado = lenguajes.filter(function(item) {
 })
 
 console.log(resultado) // ['javascript', 'C', 'c++']
+
+// Método MAP, evalue un arreglo y lo modifica y hay que pasarle una función
+
