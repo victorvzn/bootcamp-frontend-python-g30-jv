@@ -180,7 +180,8 @@ const persona = {
   nombre: "Guillermo",
   edad: 28,
   esProgramador: true,
-  "mi color favorito": 'azúl'
+  "mi color favorito": 'azúl',
+  coloresFavoritos: ['rosado', 'rojo', 'azúl']
 }
 
 const persona2 = {
@@ -196,3 +197,5 @@ console.log(persona.edad) // 28
 console.log(persona.esProgramador) // true
 console.log(persona.estadoCivil) // undefined
 console.log(persona['mi color favorito']) // azúl
+console.log(persona.coloresFavoritos) // ['rosado', 'rojo', 'azúl']
+console.log(persona.coloresFavoritos[0]) // 'rosado'
