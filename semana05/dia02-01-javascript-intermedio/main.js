@@ -55,4 +55,10 @@ listaDeNombres.pop()
 
 console.log(listaDeNombres)
 
-// 
+// Insertar un elemento en un posición determinada
+
+listaDeNombres.splice(0, 0, 'CÓDIGO')
+listaDeNombres.splice(2, 0, 'TECSUP')
+
+console.log(listaDeNombres)
+
