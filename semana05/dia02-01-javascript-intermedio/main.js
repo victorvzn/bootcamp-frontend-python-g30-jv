@@ -62,3 +62,21 @@ listaDeNombres.splice(2, 0, 'TECSUP')
 
 console.log(listaDeNombres)
 
+// Eliminar un elemento en una posición determinada
+
+listaDeNombres.splice(2, 1)
+
+console.log(listaDeNombres)
+
+// Obtener el tamaño de nuestro arreglo
+
+console.log(listaDeNombres.length) // 3
+console.log('bienvenido'.length)   // 10
+
+// Obtener el último elemento del arreglo
+
+console.log(listaDeNombres[3 - 1])
+console.log(listaDeNombres[listaDeNombres.length - 1]) // Renzo
+console.log(listaDeNombres.at(0))  // CÓDIGO
+console.log(listaDeNombres.at(-1)) // Renzo
+console.log(listaDeNombres.at(-2)) // Guillermo
