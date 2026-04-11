@@ -129,3 +129,34 @@ console.log(lenguajes)
 //   console.log(i)
 // }
 
+const miArreglo = []
+
+lenguajes.forEach(function(lenguaje) {
+  console.log('#', lenguaje)
+  miArreglo.push('El mejor: ' + lenguaje)
+})
+
+console.log(miArreglo)
+
+// Método REDUCE, nos ayuda a acumular(sumar) los valores de un arreglo.
+
+const numeros = [3, 40, 100, 7, 50] // 200
+
+// Con un FOR
+
+let sumatoria = 0
+
+for(let i = 0; i < numeros.length; i++) {
+  sumatoria = sumatoria + numeros[i]
+}
+
+console.log(sumatoria)
+
+// Con Reduce
+
+const sumatoriaConReduce = numeros.reduce(function(acumulador, valorActual) {
+  return acumulador + valorActual
+}, 0)
+
+console.log(sumatoriaConReduce)
+
