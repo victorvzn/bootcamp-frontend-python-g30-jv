@@ -103,5 +103,16 @@ const resultado = lenguajes.filter(function(item) {
 
 console.log(resultado) // ['javascript', 'C', 'c++']
 
-// Método MAP, evalue un arreglo y lo modifica y hay que pasarle una función
+// Método MAP, evalue un arreglo, lo modifica y hay que pasarle una función. Nos devuelve un arreglo modificado. Siempre devuelve un nuevo arreglo.
 
+console.log(lenguajes)
+
+const nombreConTitulo = lenguajes.map(function(lenguaje) {
+  // Lógica
+  // return 'hola'
+  return '*' + lenguaje + '*'
+})
+
+console.log(nombreConTitulo)
+
+// Método SORT, 
