@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Javascript + DOM: Key event detect</title>
+  <style>
+    #tecla {
+      color: orangered;
+      font-size: 32px;
+    }
+    #caracter {
+      color: blue;
+      font-size: 40px;
+    }
+  </style>
 </head>
 <body>
   <h1>Javascript + DOM: Key event detect</h1>
@@ -24,6 +34,16 @@
     // console.log({ caracter })
     // console.log(tecla.textContent) // Lectura de atributos
     // tecla.textContent = '99999' // Escribir sobre los atributos del elemento html
+
+    document.addEventListener('keydown', function(event) {
+      // console.log('Presionaste una tecla!!')
+
+      console.log(event.key) // Letra presionada
+      console.log(event.keyCode) // Código ASCII
+
+      tecla.textContent = event.keyCode
+      caracter.textContent = event.key
+    })
   </script>
 </body>
 </html>
