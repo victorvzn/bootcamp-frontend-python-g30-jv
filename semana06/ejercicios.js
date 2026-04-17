@@ -1,4 +1,4 @@
-// TODO: Resolver los siguientes ejercicios para el siguiente jueves y compartir conmigo su repositorio con la solución.
+// TODO: Resolver los siguientes ejercicios para el siguiente jueves y compartir conmigo su repositorio con las soluciones.
 
 // Ejercicio 1: Contar vocales
 // Descripción: Retorna cuántas vocales contiene un texto dado, sin importar mayúsculas.
