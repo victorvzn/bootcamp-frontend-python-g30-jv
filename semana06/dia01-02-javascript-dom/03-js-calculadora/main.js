@@ -39,7 +39,7 @@ buttons.forEach(function(button) {
       operando = ''
     } else {
       // PASO 1. Evaluar cuando presionamos algún número
-      numeroActual = Number(numeroActual + botonTexto)
+      numeroActual = Number(numeroActual + botonTexto) // Concatenamos numero actual y botonTexto
     }
 
     inputElemento.value = numeroActual
