@@ -20,7 +20,15 @@ buttons.forEach(function(button) {
     // console.log(event)
     const botonTexto = event.target.textContent
 
-    numeroActual = Number(numeroActual + botonTexto)
+    // PASO 2. Evaluamos el operador seleccionado
+    if (botonTexto === '+') {
+      operador = botonTexto
+      operando = Number(numeroActual) // Guardamos temporalment el número actual
+      numeroActual = 0
+    } else {
+      // PASO 1. Evaluar cuando presionamos algún número
+      numeroActual = Number(numeroActual + botonTexto)
+    }
 
     inputElemento.value = numeroActual
   })
