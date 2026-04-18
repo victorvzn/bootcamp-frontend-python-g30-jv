@@ -20,11 +20,23 @@ buttons.forEach(function(button) {
     // console.log(event)
     const botonTexto = event.target.textContent
 
-    // PASO 2. Evaluamos el operador seleccionado
+    // TODO: Terminar las operacions de resta y multiplicación de la calculadora
+
     if (botonTexto === '+') {
+      // PASO 2. Evaluamos el operador seleccionado
       operador = botonTexto
       operando = Number(numeroActual) // Guardamos temporalment el número actual
       numeroActual = 0
+    } else if (botonTexto === '='){
+      // PASO 3. Cuando presionamos el botón '='
+      // Aquí realizamos las operaciones en base al número actual y al operando
+      numeroActual = Number(operando) + Number(numeroActual)
+    } else if (botonTexto === 'CE') {
+      // PASO 4. Cuando presionamos el botón 'CE'
+      // Limpiamos operando, operador y el numeroActual(input)
+      numeroActual = '0'
+      operador = ''
+      operando = ''
     } else {
       // PASO 1. Evaluar cuando presionamos algún número
       numeroActual = Number(numeroActual + botonTexto)
