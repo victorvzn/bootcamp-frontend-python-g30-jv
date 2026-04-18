@@ -9,7 +9,26 @@ taskAdd.addEventListener('click', function(event) {
   console.log('click!', taskInput.value)
 
   // Crear elementos dinamicamente
-  const boton = document.createElement('button')
-  boton.textContent = 'Este es mi botón'
-  document.body.appendChild(boton)
+  // const boton = document.createElement('button')
+  // boton.textContent = 'Este es mi botón'
+  // document.body.appendChild(boton)
+
+  const li = document.createElement('li')
+  const button = document.createElement('button')
+
+  li.textContent = taskInput.value
+
+  button.textContent = 'Borrar'
+
+  li.appendChild(button)
+
+  taskList.appendChild(li)
+
+  taskInput.value = ''
+})
+
+taskList.addEventListener('click', function(event) {
+  if (event.target.tagName === 'BUTTON') {
+    event.target.parentElement.remove()
+  }
 })
