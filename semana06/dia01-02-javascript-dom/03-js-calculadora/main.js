@@ -16,6 +16,12 @@ buttons.forEach(function(button) {
   // console.log(button.textContent)
 
   button.addEventListener('click', function(event) {
-    console.log('click!', button.textContent)
+    // console.log('click!', button.textContent)
+    // console.log(event)
+    const botonTexto = event.target.textContent
+
+    numeroActual = Number(numeroActual + botonTexto)
+
+    inputElemento.value = numeroActual
   })
 })
