@@ -9,7 +9,7 @@ taskAdd.addEventListener('click', function(event) {
   console.log('click!', taskInput.value)
 
   // Crear elementos dinamicamente
-  // const boton = document.createElement('button')
-  // boton.textContent = 'Este es mi botón'
-  // document.body.appendChild(boton)
+  const boton = document.createElement('button')
+  boton.textContent = 'Este es mi botón'
+  document.body.appendChild(boton)
 })
