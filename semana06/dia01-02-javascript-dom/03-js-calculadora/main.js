@@ -49,5 +49,10 @@ buttons.forEach(function(button) {
     }
 
     inputElemento.value = numeroActual
+    // inputElemento.value = new Intl.NumberFormat().format(numeroActual)
   })
 })
+
+// const number = 3500;
+
+// console.log(new Intl.NumberFormat().format(number));
