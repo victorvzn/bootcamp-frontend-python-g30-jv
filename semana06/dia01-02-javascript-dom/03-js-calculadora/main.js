@@ -22,7 +22,7 @@ buttons.forEach(function(button) {
 
     // TODO: Terminar las operacions de resta y multiplicación de la calculadora
 
-    if (botonTexto === '+') {
+    if (botonTexto === '+' || botonTexto === '-' || botonTexto === '*') {
       // PASO 2. Evaluamos el operador seleccionado
       operador = botonTexto
       operando = Number(numeroActual) // Guardamos temporalment el número actual
@@ -30,7 +30,13 @@ buttons.forEach(function(button) {
     } else if (botonTexto === '='){
       // PASO 3. Cuando presionamos el botón '='
       // Aquí realizamos las operaciones en base al número actual y al operando
-      numeroActual = Number(operando) + Number(numeroActual)
+      if (operador === '+') {
+        numeroActual = Number(operando) + Number(numeroActual)
+      } else if (operador === '-') {
+        numeroActual = Number(operando) - Number(numeroActual)
+      } else if (operador === '*') {
+        numeroActual = Number(operando) * Number(numeroActual)
+      }
     } else if (botonTexto === 'CE') {
       // PASO 4. Cuando presionamos el botón 'CE'
       // Limpiamos operando, operador y el numeroActual(input)
