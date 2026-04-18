@@ -279,3 +279,19 @@ console.log('Ejercicio 20: Texto a lista')
 console.log(textoALista(' manzana, pera , uva')) // → ['manzana', 'pera', 'uva']
 console.log(textoALista('a,b,c')) // → ['a', 'b', 'c']
 console.log(textoALista('')) // → []
+
+
+
+// Ejemplo de rescursividad
+
+function foo (i) {
+  if (i < 0) return;
+
+  console.log("inicio:" + i);
+
+  foo(i - 1);
+ 
+  console.log("fin:" + i);
+}
+
+foo(3);
