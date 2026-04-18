@@ -11,3 +11,11 @@ const inputElemento = document.querySelector('#inputDisplay')
 const buttons = document.querySelectorAll('.button')
 
 console.log(buttons)
+
+buttons.forEach(function(button) {
+  // console.log(button.textContent)
+
+  button.addEventListener('click', function(event) {
+    console.log('click!', button.textContent)
+  })
+})
