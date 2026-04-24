@@ -55,3 +55,26 @@ console.log(saludoEnMayusculas())
 console.log(saludoEnMayusculas('Teffo'))
 
 // PARÁMETROS REST (operador rest -> ...)
+
+const numeros = [4, 5]
+
+function miSuma(n1, n2) {
+  return n1 + n2
+}
+
+console.log(miSuma(4, 8))
+console.log(miSuma(...numeros))
+
+const listaDeNumeros = [6, 33, 1, -66, 998, 453]
+
+console.log(Math.max(25, 8, 65))
+console.log(Math.max(...listaDeNumeros))
+
+function miSuma2(...numeros) {
+  console.log(numeros)
+}
+
+miSuma2(...listaDeNumeros)
+
+// SPREAD OPERATOR (...)
+// 
