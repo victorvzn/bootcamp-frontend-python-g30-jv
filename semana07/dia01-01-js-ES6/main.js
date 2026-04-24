@@ -53,3 +53,5 @@ const saludoEnMayusculas = (nombre = 'Anónimo') => {
 
 console.log(saludoEnMayusculas())
 console.log(saludoEnMayusculas('Teffo'))
+
+// PARÁMETROS REST (operador rest -> ...)
