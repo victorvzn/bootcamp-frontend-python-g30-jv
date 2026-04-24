@@ -45,5 +45,11 @@ console.log(suma(2, 5))
 
 // Arrow functions con parámetros por defecto con retorno y en múltiples líneas
 
+const saludoEnMayusculas = (nombre = 'Anónimo') => {
+  const nombreEnMayusculas = nombre.toUpperCase()
 
+  return 'Hola ' + nombreEnMayusculas + '!'
+}
 
+console.log(saludoEnMayusculas())
+console.log(saludoEnMayusculas('Teffo'))
