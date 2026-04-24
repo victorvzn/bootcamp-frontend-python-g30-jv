@@ -77,4 +77,44 @@ function miSuma2(...numeros) {
 miSuma2(...listaDeNumeros)
 
 // SPREAD OPERATOR (...)
-// 
+// Sirve para expandir un arreglo, incluso objetos
+
+const frutas = ['manzanas', 'naranjas', 'plátanos', 'sandías', 'duraznos']
+
+const verduras = ['papas', 'cebollas']
+
+// .concat
+
+const frutasYVerduras = [...frutas, ...verduras]
+
+console.log(frutasYVerduras)
+
+const persona = {
+  nombre: 'Victor',
+  edad: 39,
+  color: 'azul'
+}
+
+const stack = {
+  javascript: 'React.js',
+  python: 'Django',
+  nodejs: 'Express.js',
+  color: 'rojo'
+}
+
+const personaYsuStack = {
+  ...persona,
+  ...stack
+}
+
+console.log(personaYsuStack)
+
+const personaYsuStack2 = {
+  persona,
+  stack
+}
+
+console.log(personaYsuStack2)
+
+// Template strings
+
