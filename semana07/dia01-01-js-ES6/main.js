@@ -116,5 +116,20 @@ const personaYsuStack2 = {
 
 console.log(personaYsuStack2)
 
-// Template strings
+// Template strings (template literals) 
+// Forma moderna de crear cadenas de texto usando backticks(`)
+// ${} -> Permite insertar variables o valores directamente
 
+const nombre = 'Victor'
+const mensaje = 'Hola ' + nombre + ', bienvenido.'
+
+console.log(mensaje)
+
+const mensaje2 = `Hola ${nombre}, bienvenido.`
+
+console.log(mensaje2)
+
+const a = 99
+const b = 48
+
+console.log(`La suma es ${a + b}`)
