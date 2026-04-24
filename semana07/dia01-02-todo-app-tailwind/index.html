@@ -7,28 +7,31 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-  <main>
-    <section>
+  <main class="task w-96 border mx-auto rounded-lg shadow mt-10">
+    <section class="flex flex-col px-4 py-6">
 
-      <h1 class="text-xl font-bold text-gray-900 text-center">
+      <h1 class="text-xl font-bold text-gray-900 text-center mb-4">
         Lista de tareas
       </h1>
 
-      <label>
+      <label class="flex flex-col gap-1 mb-2">
         Ingresa una tarea
         <input
           type="text"
           placeholder="Ej. Aprender javascript"
+          class="task__input border border-gray-300 text-sm rounded-lg p-2 w-full"
         />
       </label>
 
-      <div>
-        <button>
+      <div class="flex justify-end mb-4">
+        <button
+          class="task__clear border border-blue-700 font-medium text-sm p-1 px-3 text-blue-500 hover:text-white hover:bg-blue-700 rounded-lg duration-300"
+        >
           Limpiar tareas completadas
         </button>
       </div>
 
-      <ul>
+      <ul class="task__list flex flex-col">
         <li>Tarea 1</li>
         <li>Tarea 2</li>
         <li>Tarea 3</li>
