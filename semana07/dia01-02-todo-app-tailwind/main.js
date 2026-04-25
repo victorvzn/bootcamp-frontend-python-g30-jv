@@ -43,14 +43,18 @@ function renderTasks(tasks = []) {
 
   tasks.forEach(function(task) {
     lista = lista + `
-      <li class="">
+      <li class="flex justify-center items-center gap-4 py-2">
         <input
           type="checkbox"
         />
-        <div>
+        <div
+          class="w-full"
+        >
           ${task.title}
         </div>
-        <button>
+        <button
+          class="border border-red-700 font-medium px-3 py-1 text-red-700 rounded-lg hover:bg-red-700 hover:text-white duration-600"
+        >
           Borrar
         </button>
       </li>
