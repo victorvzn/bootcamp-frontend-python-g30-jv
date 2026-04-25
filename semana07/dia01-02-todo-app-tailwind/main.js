@@ -46,9 +46,10 @@ function renderTasks(tasks = []) {
       <li class="flex justify-center items-center gap-4 py-2">
         <input
           type="checkbox"
+          ${task.completed ? 'checked' : '' }
         />
         <div
-          class="w-full"
+          class="w-full ${task.completed ? 'line-through' : '' }"
         >
           ${task.title}
         </div>
