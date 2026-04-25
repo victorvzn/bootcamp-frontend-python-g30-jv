@@ -43,8 +43,16 @@ function renderTasks(tasks = []) {
 
   tasks.forEach(function(task) {
     lista = lista + `
-      <li>
-        ${task.title}
+      <li class="">
+        <input
+          type="checkbox"
+        />
+        <div>
+          ${task.title}
+        </div>
+        <button>
+          Borrar
+        </button>
       </li>
     `
   })
