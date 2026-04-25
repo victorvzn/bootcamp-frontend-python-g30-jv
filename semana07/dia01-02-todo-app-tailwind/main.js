@@ -27,9 +27,21 @@ taskInput.addEventListener('keydown', function(event) {
 })
 
 function renderTasks(tasks = []) {
-  
+  let lista = ''
+
+  tasks.forEach(function(task) {
+    lista = lista + `
+      <li>
+        ${task.title}
+      </li>
+    `
+  })
+
+  console.log(lista)
+
+  taskList.innerHTML = lista
 
   // taskList.innerHTML = '<h1>Hola desde <strong>renderTasks</strong></h1>'
 }
 
-renderTasks()
+renderTasks(tasks)
