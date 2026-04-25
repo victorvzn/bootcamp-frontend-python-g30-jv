@@ -47,6 +47,7 @@ function renderTasks(tasks = []) {
         <input
           type="checkbox"
           ${task.completed ? 'checked' : '' }
+          onchange="checkTask(${index})"
         />
         <div
           class="w-full ${task.completed ? 'line-through' : '' }"
@@ -80,6 +81,17 @@ function removeTask(selectedIndex) {
   })
 
   tasks = modifiedTasks
+
+  renderTasks(tasks)
+}
+
+function checkTask(selectedIndex) {
+  // Devolver un objeto que tiene title y completed
+  const taskSelected = { ...tasks[selectedIndex] }
+
+  taskSelected.completed = !taskSelected.completed
+
+  tasks[selectedIndex] = taskSelected
 
   renderTasks(tasks)
 }
