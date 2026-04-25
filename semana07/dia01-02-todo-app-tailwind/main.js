@@ -22,7 +22,19 @@ let tasks = [
 taskInput.addEventListener('keydown', function(event) {
   
   if (event.key === 'Enter') {
-    console.log(event.key)
+    // console.log(event.key)
+    const newTask = {
+      title: event.target.value,
+      completed: false
+    }
+
+    console.log(newTask)
+
+    tasks.push(newTask)
+
+    renderTasks(tasks)
+
+    taskInput.value = ''
   }
 })
 
