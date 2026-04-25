@@ -72,7 +72,7 @@ function renderTasks(tasks = []) {
 function removeTask(selectedIndex) {
   console.log(selectedIndex)
 
-  // TODO: Remover el indice seleccionado del arreglo tasks y posteriormente actualizar la lista de tareas con la función renderTasks
+  // DONE: Remover el indice seleccionado del arreglo tasks y posteriormente actualizar la lista de tareas con la función renderTasks
 
   const modifiedTasks = tasks.filter(function(task, index) {
     return index != selectedIndex
