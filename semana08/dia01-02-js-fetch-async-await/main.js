@@ -28,6 +28,23 @@ const fetchUsersConRetorno = async () => { // Retorna un promesa (Promise)
 // fetchUsersConRetorno() // Retorna una promesa
 //   .then(users => console.log(users))
 
+const renderUsers = (users = []) => {
+  const divApp = document.querySelector('#app')
+
+  let userLists = ''
+
+  users.forEach(user => {
+    userLists += `
+      <div>
+        <h2>${user.id} - ${user.name}</h2>
+        <p>${user.company.name}</p>
+      </div>
+    `
+  })
+
+  divApp.innerHTML = userLists
+}
+
 const fetchUsersConManejoDeErrores = async () => {
   try {
     const response = await fetch(url)
@@ -49,4 +66,10 @@ const fetchUsersConManejoDeErrores = async () => {
 fetchUsersConManejoDeErrores()
   .then(users => {
     console.log(users)
+    renderUsers(users)
   })
+
+// TODO: Resolver estos ejercicios
+// Mostrar un mensaje de cargando
+// Mostrar solo usuarios de una ciudad, la ciudad es a su elección
+// Mostrar cuántos usuarios hay en el listado de users
