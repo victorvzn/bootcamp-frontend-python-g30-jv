@@ -16,3 +16,61 @@ console.log('Fin de mi programa')
 
 ## API
 
+Una API es un mensajero que lleva pedidos(peticiones) y trae respuestas.
+
+Nuestras aplaciones web, no va directo a una base datos.
+Nuestra aplicación web siempre habla con una API.
+
+Ejemplo: Cliente -> Mesero (API) -> Cocina (BACKEND o BASE DE DATOS)
+
+## HTTP + Verbos HTTP
+
+HTTP -> Es un protocolo de comunicación (Hypertext Transfer Protocol)
+
+HTTP es el lenguage que las aplicaciones web usan para comunicarse
+
+Ejemplos:
+http://127.0.0.1:5500
+http://localhost:5500
+https://youtube.com
+
+## Verbos HTTP
+
+GET         -> Obtener datos (Lectura)
+POST        -> Crear datos
+PUT         -> Actualizar datos
+PATCH       -> Actualizar datos pero de una más atómica
+DELETE      -> Eliminar datos
+
+## Formato JSON (JavaScript Object Notation)
+
+Formato javascript con un  objeto válido
+
+```js
+{
+  nombre: 'Victor',
+  edad: 39,
+}
+```
+
+Este mismo formato en JSON:
+
+```js
+{
+  "nombre": "Victor",
+  "edad": 39
+  "encendido": true,
+  "favoritos": [],
+  "notas": {}
+}
+```
+
+En JS:
+
+```js
+JSON.stringify({ name: 'Alonso' }) // Convertimos a una cadena de texto con el formato JSON
+JSON.parse('{"name":"Alonso"}') // Convertimos una cadena de texto con el formato JSON a un objeto JS
+```
+
+## STATUS CODE
+
