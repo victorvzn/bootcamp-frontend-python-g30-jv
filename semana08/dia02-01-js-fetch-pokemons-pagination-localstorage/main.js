@@ -70,7 +70,6 @@ const renderPokemons = (pokemons = []) => {
 
 // TODO: Implementar los botones: anterior, primero y último.
 
-
 const nextPageButton = document.querySelector('#nextPage')
 
 nextPageButton.addEventListener('click', async () => {
