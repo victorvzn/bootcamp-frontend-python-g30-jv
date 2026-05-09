@@ -1,6 +1,7 @@
 const LIMIT = 6
 
 let page = 1
+let count = 0
 
 // DONE: 01 - Crear una función que nos permita consultar los datos de la pokeapi.co
 
@@ -61,7 +62,14 @@ const renderPokemons = (pokemons = []) => {
   })
 
   pokemonList.innerHTML = elements
+
+  const totalPages = Math.ceil(count / LIMIT)
+
+  document.querySelector('#currentPage').textContent = `${page} de ${totalPages}`
 }
+
+// TODO: Implementar los botones: anterior, primero y último.
+
 
 const nextPageButton = document.querySelector('#nextPage')
 
@@ -80,5 +88,8 @@ nextPageButton.addEventListener('click', async () => {
 fetchPokemons()
   .then(data => {
     console.log(data)
+
+    count = data.count
+
     renderPokemons(data.results)
   })
