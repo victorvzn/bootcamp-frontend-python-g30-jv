@@ -42,8 +42,12 @@ const renderPokemons = (pokemons = []) => {
         <h2>${pokemon.name}</h2>
         <img src="${pokemon.image}" width="80" height="80" />
         <div>
-          <button>Favorito</button>
-          <button>Editar</button>
+          <button>
+            <img src="images/icon-star.svg" />
+          </button>
+          <button>
+            <img src="images/icon-edit.svg" />
+          </button>
         </div>
       </article>
     `
