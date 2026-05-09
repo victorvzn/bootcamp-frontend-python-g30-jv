@@ -7,7 +7,7 @@ const fetchPokemons = async () => {
 
   const data = await response.json() // Devuelve una promesa
 
-  // Obtener el id en base al campo url
+  // TODO: Agregar el id a cada pokemon dentro del arreglo results para usarlo en la imagen del pokemon
 
   const dataResults = data.results.map(pokemon => {
     const id = pokemon.url.split('/').at(6)
@@ -38,9 +38,13 @@ const renderPokemons = (pokemons = []) => {
 
   pokemons.forEach(pokemon => {
     elements += `
-      <article>
-        ${pokemon.name}
+      <article class="pokemon-item">
+        <h2>${pokemon.name}</h2>
         <img src="${pokemon.image}" width="80" height="80" />
+        <div>
+          <button>Favorito</button>
+          <button>Editar</button>
+        </div>
       </article>
     `
   })
