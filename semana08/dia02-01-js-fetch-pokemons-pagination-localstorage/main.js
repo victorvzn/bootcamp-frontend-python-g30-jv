@@ -5,12 +5,21 @@ const fetchPokemons = async () => {
 
   const response = await fetch(API_URL) // Devuelve una promesa
 
-  const data = (await response).json() // Devuelve una promesa
+  const data = await response.json() // Devuelve una promesa
 
   return data
 }
 
 // TODO: 02 - Crear una función que nos permita renderizar(imprimir) los pokemons en la página
+const renderPokemons = (pokemons = []) => {
+  const pokemonList = document.querySelector('#pokemonList')
+
+  let elements = ''
+
+  // TODO: Necesitamos renderizar el nombre del pokemon en una etiqueta article en el elemento section con id pokemonList
+
+}
+
 
 fetchPokemons()
   .then(data => {
