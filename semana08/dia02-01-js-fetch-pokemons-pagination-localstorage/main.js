@@ -17,11 +17,16 @@ const renderPokemons = (pokemons = []) => {
   let elements = ''
 
   // TODO: Necesitamos renderizar el nombre del pokemon en una etiqueta article en el elemento section con id pokemonList
+  pokemons.forEach(pokemon => {
+    elements += `<article>${pokemon.name}</article>`
+  })
 
+  pokemonList.innerHTML = elements
 }
 
 
 fetchPokemons()
   .then(data => {
     console.log(data)
+    renderPokemons(data)
   })
