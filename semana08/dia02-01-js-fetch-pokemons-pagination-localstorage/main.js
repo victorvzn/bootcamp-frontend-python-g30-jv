@@ -1,10 +1,13 @@
 const LIMIT = 6
 
+let page = 1
+
 // DONE: 01 - Crear una función que nos permita consultar los datos de la pokeapi.co
 
 const fetchPokemons = async (page = 1) => {
   const OFFSET = (page - 1) * LIMIT
 
+  // const API_URL = `https://pokeapi.co/api/v2/pokemon'
   const API_URL = `https://pokeapi.co/api/v2/pokemon?offset=${OFFSET}&limit=${LIMIT}`
 
   const response = await fetch(API_URL) // Devuelve una promesa
@@ -60,6 +63,19 @@ const renderPokemons = (pokemons = []) => {
   pokemonList.innerHTML = elements
 }
 
+const nextPageButton = document.querySelector('#nextPage')
+
+nextPageButton.addEventListener('click', async () => {
+  console.log('Next click')
+
+  page = page + 1
+
+  const dataPokemons = await fetchPokemons(page)
+
+  console.log(dataPokemons)
+
+  renderPokemons(dataPokemons.results)
+})
 
 fetchPokemons()
   .then(data => {
