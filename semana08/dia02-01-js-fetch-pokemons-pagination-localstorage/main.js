@@ -3,6 +3,8 @@ const LIMIT = 6
 let page = 1
 let count = 0
 
+let pokemonFavorites = []
+
 // DONE: 01 - Crear una función que nos permita consultar los datos de la pokeapi.co
 
 const fetchPokemons = async (page = 1) => {
@@ -50,11 +52,14 @@ const renderPokemons = (pokemons = []) => {
         <h2>${pokemon.name}</h2>
         <img src="${pokemon.image}" width="80" height="80" />
         <div>
-          <button>
+          <button
+            onclick="toggleFavorite('${pokemon.id}', '${pokemon.name}', '${pokemon.image}')"
+          >
             <img src="images/icon-star.svg" />
           </button>
           <button
             onclick="readPokemon('${pokemon.id}')"
+            class="is-hidden"
           >
             <img src="images/icon-edit.svg" />
           </button>
@@ -72,6 +77,12 @@ const renderPokemons = (pokemons = []) => {
 
 const readPokemon = (pokemonId) => {
   console.log(pokemonId)
+}
+
+const toggleFavorite = (id, name, image) => {
+  pokemonFavorites.push({ id, name, image })
+
+  console.log(pokemonFavorites)
 }
 
 // TODO: Implementar los botones: anterior, primero y último.
