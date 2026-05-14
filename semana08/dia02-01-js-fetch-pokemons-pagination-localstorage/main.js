@@ -62,7 +62,7 @@ const renderPokemons = (pokemons = []) => {
           </button>
           <button
             onclick="readPokemon('${pokemon.id}')"
-            class="is-hidden"
+            class='${pokemon.isFavorite ? '' : 'is-hidden'}'
           >
             <img src="images/icon-edit.svg" />
           </button>
