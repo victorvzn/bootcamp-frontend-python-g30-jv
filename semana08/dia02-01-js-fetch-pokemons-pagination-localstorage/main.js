@@ -83,7 +83,21 @@ const readPokemon = (pokemonId) => {
 }
 
 const toggleFavorite = async (id, name, image) => {
-  pokemonFavorites.push({ id, name, image })
+  const foundPokemonFavorite = pokemonFavorites.filter(
+    favorite => favorite.id === id
+  )
+
+  const existPokemonFavorite = foundPokemonFavorite.length > 0
+
+  if (existPokemonFavorite) {
+    // Retiramos el pokemon de favoritos
+    pokemonFavorites = pokemonFavorites.filter(
+      pokemon => pokemon.id !== id
+    )
+  } else {
+    // Agregamos el pokemon a favoritos
+    pokemonFavorites.push({ id, name, image })
+  }
 
   console.log(pokemonFavorites)
 
