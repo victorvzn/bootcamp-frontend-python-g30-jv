@@ -23,10 +23,13 @@ const fetchPokemons = async (page = 1) => {
     const id = pokemon.url.split('/').at(6)
     const image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
 
+    const foundFavorite = pokemonFavorites.find(favorite => favorite.id === id)
+
     return {
       ...pokemon,
       id,
-      image
+      image,
+      isFavorite: Boolean(foundFavorite), // CAST -> CONVERTIMOS UN TIPO DE DATO A OTRO: objeto a boolean
     }
   })
 
@@ -55,7 +58,7 @@ const renderPokemons = (pokemons = []) => {
           <button
             onclick="toggleFavorite('${pokemon.id}', '${pokemon.name}', '${pokemon.image}')"
           >
-            <img src="images/icon-star.svg" />
+            <img src='images/icon-star${pokemon.isFavorite ? '-filled' : ''}.svg' />
           </button>
           <button
             onclick="readPokemon('${pokemon.id}')"
@@ -79,10 +82,14 @@ const readPokemon = (pokemonId) => {
   console.log(pokemonId)
 }
 
-const toggleFavorite = (id, name, image) => {
+const toggleFavorite = async (id, name, image) => {
   pokemonFavorites.push({ id, name, image })
 
   console.log(pokemonFavorites)
+
+  const data = await fetchPokemons(page)
+
+  renderPokemons(data.results)
 }
 
 // TODO: Implementar los botones: anterior, primero y último.
