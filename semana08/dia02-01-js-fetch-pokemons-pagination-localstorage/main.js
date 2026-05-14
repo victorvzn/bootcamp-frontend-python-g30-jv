@@ -71,9 +71,12 @@ const renderPokemons = (pokemons = []) => {
 // TODO: Implementar los botones: anterior, primero y último.
 
 const nextPageButton = document.querySelector('#nextPage')
+const prevPageButton = document.querySelector('#prevPage')
 
 nextPageButton.addEventListener('click', async () => {
   console.log('Next click')
+
+  // TODO: validar que no pasemos la última página
 
   page = page + 1
 
@@ -84,7 +87,17 @@ nextPageButton.addEventListener('click', async () => {
   renderPokemons(dataPokemons.results)
 })
 
-fetchPokemons()
+prevPageButton.addEventListener('click', async () => {
+  page = page - 1
+
+  // TODO: validar que no lleguemos a una página menor a 1
+
+  const dataPokemons = await fetchPokemons(page)
+
+  renderPokemons(dataPokemons.results)
+})
+
+fetchPokemons() // Devuelve una promesa por eso necesita el .then
   .then(data => {
     console.log(data)
 
