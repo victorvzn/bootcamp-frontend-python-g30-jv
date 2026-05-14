@@ -53,7 +53,9 @@ const renderPokemons = (pokemons = []) => {
           <button>
             <img src="images/icon-star.svg" />
           </button>
-          <button>
+          <button
+            onclick="readPokemon('${pokemon.id}')"
+          >
             <img src="images/icon-edit.svg" />
           </button>
         </div>
@@ -66,6 +68,10 @@ const renderPokemons = (pokemons = []) => {
   const totalPages = Math.ceil(count / LIMIT)
 
   document.querySelector('#currentPage').textContent = `${page} de ${totalPages}`
+}
+
+const readPokemon = (pokemonId) => {
+  console.log(pokemonId)
 }
 
 // TODO: Implementar los botones: anterior, primero y último.
