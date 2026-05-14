@@ -3,7 +3,9 @@ const LIMIT = 6
 let page = 1
 let count = 0
 
-let pokemonFavorites = []
+let pokemonFavorites = JSON.parse(localStorage.getItem('pokemon-favorites')) ?? []
+
+console.log(pokemonFavorites)
 
 // DONE: 01 - Crear una función que nos permita consultar los datos de la pokeapi.co
 
@@ -98,6 +100,8 @@ const toggleFavorite = async (id, name, image) => {
     // Agregamos el pokemon a favoritos
     pokemonFavorites.push({ id, name, image })
   }
+
+  localStorage.setItem('pokemon-favorites', JSON.stringify(pokemonFavorites))
 
   console.log(pokemonFavorites)
 
