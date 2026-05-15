@@ -23,6 +23,18 @@ const deleteMovie = async (id) => {
   return await response.json()
 }
 
+const createMovie = async (form) => {
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(form) // El body siempre tiene que ser una cadena de texto
+  }
+
+  return await fetch(API_URL, options)
+}
+
 // TODO: Renderizar las peliculas usando la plantilla del tbody
 
 const renderMovies = (movies = []) => {
@@ -87,6 +99,57 @@ const renderMovies = (movies = []) => {
     })
   })
 }
+
+const elMoviesForm = document.querySelector('#moviesForm')
+
+elMoviesForm.addEventListener('submit', async (event) => {
+  event.preventDefault() // Evita que el formulario actualice la página
+
+  console.log('Guardando la película')
+
+  // 1. Extraer los datos del formulario
+
+  const peliculasForm = document.forms['moviesForm']
+
+  const name = peliculasForm.name.value
+  const image = peliculasForm.image.value
+  const release = peliculasForm.release.value
+  const summary = peliculasForm.summary.value
+
+  console.log(name, image, release, summary)
+
+  // 2. Crear la película en el servidor
+
+  const newMovie = {
+    name,
+    image,
+    release,
+    summary
+  }
+
+  try {
+    const response = await createMovie(newMovie)
+
+    if (!response.ok){
+      console.log('La película no se guardó correctamente')
+      return
+    }
+
+    console.log('La película se guardó correctamente')
+  } catch (error) {
+    console.log(error)
+  }
+
+  // 3. Actualizar la lista de películas
+
+  const movies = await fetchMovies()
+
+  renderMovies(movies)
+
+  // 4. Limpiamos el formulario
+
+  peliculasForm.reset()
+})
 
 fetchMovies()
   .then(data => {
