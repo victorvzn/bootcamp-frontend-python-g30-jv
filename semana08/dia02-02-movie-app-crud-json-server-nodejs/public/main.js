@@ -72,7 +72,18 @@ const renderMovies = (movies = []) => {
       console.log('Eliminando pelicula', id)
 
       // 2. Eliminar la pelicula en el servidor
-      await deleteMovie(id)
+
+      const confirmDelete = confirm('¿Estás seguro de eliminar esta película?') // Devuelve un boolean
+
+      if (confirmDelete) {
+        await deleteMovie(id)
+
+        // 3. Actualizar la lista de películas
+
+        const movies = await fetchMovies()
+
+        renderMovies(movies)
+      }
     })
   })
 }
