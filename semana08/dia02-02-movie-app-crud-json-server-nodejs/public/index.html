@@ -10,10 +10,16 @@
   >
 </head>
 <body>
-  <h1>CRUD de películas con json-server</h1>
+  <nav class="container-fluid">
+    <ul>
+      <li>
+        <strong>CRUD de películas con json-server</strong>
+      </li>
+    </ul>
+  </nav>
 
-  <main>
-    <div>
+  <main class="container-fluid">
+    <div class="grid">
       <div>
 
         <table>
@@ -25,8 +31,8 @@
               <th>Acción</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
+          <tbody class="movies__list">
+            <!-- <tr>
               <td>111</td>
               <td>
                 <img src="https://placehold.co/100x150" alt="">
@@ -46,13 +52,29 @@
                   <button>Delete</button>
                 </div>
               </td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
 
       </div>
+
+      <div>
+        <form id="moviesForm">
+          <h2>Nueva película</h2>
+
+          <input type="text" name="name" placeholder="Nombre" required>
+          <input type="text" name="image" placeholder="Imagen" required>
+          <input type="text" name="release" placeholder="Estreno" required>
+          <textarea name="summary" placeholder="Resumen"></textarea>
+
+          <input type="submit" value="Guardar">
+        </form>
+      </div>
     </div>
   </main>
 
+  <!-- ESM: ECMASCRIPT MODULES - Sirven para separar nuestro código y lo podemos usar mediante las palabras reservadas import/export -->
+
+  <script type="module" src="main.js"></script>
 </body>
 </html>
