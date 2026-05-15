@@ -8,6 +8,21 @@ const fetchMovies = async () => {
   return await response.json() // Esperara a la conversionde JSON a Objeto JS (asincrona)
 }
 
+const deleteMovie = async (id) => {
+  // http://localhost:3000/movies/id
+
+  const url = `${API_URL}/${id}`
+
+  // ??? configuracion de fetch (DELETE)
+  const options = {
+    method: 'DELETE'
+  }
+
+  const response = await fetch(url, options) // Por defecto fetch usa el método GET
+
+  return await response.json()
+}
+
 // TODO: Renderizar las peliculas usando la plantilla del tbody
 
 const renderMovies = (movies = []) => {
@@ -50,10 +65,14 @@ const renderMovies = (movies = []) => {
   // console.log(removeButtons)
 
   removeButtons.forEach(button => {
-    button.addEventListener('click', async () => {
-      console.log('Eliminando pelicula')
+    button.addEventListener('click', async (event) => {
       // 1. Extraer el id de la película a eliminar
-      
+      const id = event.target.dataset.id
+    
+      console.log('Eliminando pelicula', id)
+
+      // 2. Eliminar la pelicula en el servidor
+      await deleteMovie(id)
     })
   })
 }
