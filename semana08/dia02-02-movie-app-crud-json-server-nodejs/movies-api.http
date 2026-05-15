@@ -14,3 +14,17 @@ Content-Type: application/json
   "release": "2026-05-14",
   "summary": "La película del año"
 }
+
+### Borrar una película
+DELETE http://localhost:3000/movies/1
+
+### Actualizar una película
+PUT http://localhost:3000/movies/5
+Content-Type: application/json
+
+{
+  "name": "The Flash MODIFICADO",
+  "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg",
+  "release": "2026-06-15",
+  "summary": "Resumen de prueba MODIFICADO"
+}
