@@ -1,3 +1,16 @@
 ### Lista todas las películas
 GET http://localhost:3000/movies
 
+### Obtener una película
+GET http://localhost:3000/movies/1
+
+### Crear una película
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "name": "G30-JV La película",
+  "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+  "release": "2026-05-14",
+  "summary": "La película del año"
+}

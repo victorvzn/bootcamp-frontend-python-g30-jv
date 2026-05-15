@@ -71,6 +71,13 @@
       "release": "2023-04-05",
       "genreId": 3,
       "summary": "Resumen de prueba"
+    },
+    {
+      "name": "G30-JV La película",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+      "release": "2026-05-14",
+      "summary": "La película del año",
+      "id": 10
     }
   ]
 }
