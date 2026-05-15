@@ -34,7 +34,7 @@ const renderMovies = (movies = []) => {
       <td>
         <div>
           <button>✏</button>
-          <button>❌</button>
+          <button class="movies__remove" data-id="${movie.id}">❌</button>
         </div>
       </td>
     </tr>
@@ -42,6 +42,20 @@ const renderMovies = (movies = []) => {
   })
 
   elMovieList.innerHTML = html
+
+  // TODO: remover una película cuando presionamos el boton ❌
+
+  const removeButtons = document.querySelectorAll('.movies__remove')
+
+  // console.log(removeButtons)
+
+  removeButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      console.log('Eliminando pelicula')
+      // 1. Extraer el id de la película a eliminar
+      
+    })
+  })
 }
 
 fetchMovies()
