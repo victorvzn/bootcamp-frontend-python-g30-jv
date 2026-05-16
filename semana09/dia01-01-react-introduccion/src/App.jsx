@@ -56,12 +56,64 @@ console.log(PI)
 
 // 03.1 - Componente usando Fragments (<></>)
 
+// const App = () => {
+//   return (
+//     <>
+//       <h1>Hola React.js!</h1>
+//       <p>Estamos aprendiendo sobre componentes.</p>
+//     </>
+//   )
+// }
+
+// export default App
+
+// 04. Extensiones de VSCODE pra usar con React.js
+// ES7+ React/Redux/React-Native snippets
+// https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
+
+// Snippets para crear components (rfc, rafce)
+
+// snippet: rfc
+
+// export default function App() {
+//   return (
+//     <div>App</div>
+//   )
+// }
+
+// snippet: rafce
+
+// const App = () => {
+//   return (
+//     <div>App</div>
+//   )
+// }
+
+// export default App
+
+// 05 - Anidar componentes dentro de otros
+
+function ComponenteSaludo() {
+  return (
+    <h4>Hola a todos!</h4>
+  )
+}
+
+function ComponenteDespedida() {
+  return (
+    <h4>Adios a todos!</h4>
+  )
+}
+
 const App = () => {
   return (
-    <>
-      <h1>Hola React.js!</h1>
-      <p>Estamos aprendiendo sobre componentes.</p>
-    </>
+    <section>
+      <h3>Componentes anidados</h3>
+
+      <ComponenteSaludo />
+
+      <ComponenteDespedida />
+    </section>
   )
 }
 
