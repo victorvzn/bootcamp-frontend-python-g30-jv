@@ -26,6 +26,7 @@ import frutas from './modules.js' // Estamos trayendo la constante frutas desde 
 
 console.log(frutas) // (3) ['manzanas', 'plátanos', 'peras']
 
-import { curso } from './modules.js'
+import { curso as MiCurso, PI } from './modules.js'
 
-console.log(curso) // {name: 'Algoritmos', nota: 20}
+console.log(MiCurso) // {name: 'Algoritmos', nota: 20}
+console.log(PI)
