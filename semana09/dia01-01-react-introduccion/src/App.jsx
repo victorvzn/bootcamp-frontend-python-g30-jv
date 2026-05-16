@@ -147,35 +147,55 @@ console.log(PI)
 
 // 07 - Usando expresiones con jsx -> "{}"
 
-import { LISTA_DE_FRUTAS, EDAD, curso } from './components/frutas.js'
+// import { LISTA_DE_FRUTAS, EDAD, curso } from './components/frutas.js'
+
+// const App = () => {
+//   // Lógica
+//   const suma = 8 + 9
+//   const nombre = 'Victor'
+
+//   // Comentarios en React.js van dentro del cuerpo de la función
+//   /* Otro comentario multilínea dentro el cuerpo de la función */
+
+//   return (
+//     <section>
+//       <h1>Usando expresiones con jsx</h1>
+
+//       <p>{suma}</p>
+//       <p>{nombre}</p>
+//       <p>{1 + 2 * 9 ** 2}</p>
+
+//       <p>{`Hola ${nombre}`}</p>
+//       <p>Hola {nombre}</p>
+
+//       {/* Comentario en React.js dentro del JSX */}
+
+//       <p>{LISTA_DE_FRUTAS}</p>
+//       <p>{EDAD}</p>
+//       <p>{JSON.stringify(curso)}</p>
+//       <p>{curso.nombre}</p>
+//       <p>{curso.nota}</p>
+//     </section>
+//   )
+// }
+
+// export default App
+
+// 08 - Propiedades de un componente (Ahora el componente será reutilizable)
+
+const BievenidaPersonalizada = (props) => {
+  return <h3>Hola {props.nombre}, tu edad es {props.edad ?? '0'} años</h3>
+}
 
 const App = () => {
-  // Lógica
-  const suma = 8 + 9
-  const nombre = 'Victor'
-
-  // Comentarios en React.js van dentro del cuerpo de la función
-  /* Otro comentario multilínea dentro el cuerpo de la función */
-
   return (
-    <section>
-      <h1>Usando expresiones con jsx</h1>
+    <div>
+      <h4>Propiedades de un componente</h4>
 
-      <p>{suma}</p>
-      <p>{nombre}</p>
-      <p>{1 + 2 * 9 ** 2}</p>
-
-      <p>{`Hola ${nombre}`}</p>
-      <p>Hola {nombre}</p>
-
-      {/* Comentario en React.js dentro del JSX */}
-
-      <p>{LISTA_DE_FRUTAS}</p>
-      <p>{EDAD}</p>
-      <p>{JSON.stringify(curso)}</p>
-      <p>{curso.nombre}</p>
-      <p>{curso.nota}</p>
-    </section>
+      <BievenidaPersonalizada nombre="Keyth" edad="26" />
+      <BievenidaPersonalizada nombre="Victor" edad="40" />
+      <BievenidaPersonalizada nombre="Herson" />
+    </div>
   )
 }
 
