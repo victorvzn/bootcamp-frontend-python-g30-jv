@@ -1,23 +1,3 @@
-// 01 - Componente base usando function
-
-function Welcome() {
-  return <h1>Bienvenidos a React.js!</h1>
-}
-
-export default Welcome
-
-// Qué es un componente?
-// * Es una función, devuelve JSX, todo componente en su nombre empieza con mayúscula.
-
-// Partes de un componente:
-// 1. Imports (Si los hay)
-// 2. Lógica (variables, hooks, functions)
-// 3. Return -> JSX
-// 4. Export ( Nos sirve para crear un módulo)
-
-// Reglas básicas de un componente
-// * UN solo elemento padre
-
 // ESM (ECMAScript Modules)
 // Es una forma moderna de importar archivos, exportar archivos, compartir códifo entre archivos
 // Gracias a esto podemos dividir el proyecto en partes pequeñas y organzadas.
@@ -30,3 +10,59 @@ import { curso as MiCurso, PI } from './modules.js'
 
 console.log(MiCurso) // {name: 'Algoritmos', nota: 20}
 console.log(PI)
+
+
+// 01 - Componente base usando function
+
+// function App() {
+//   return <h1>Bienvenidos a React.js!</h1>
+// }
+
+// export default App
+
+// Qué es un componente?
+// * Es una función, devuelve JSX, todo componente en su nombre empieza con mayúscula.
+
+// Partes de un componente:
+// 1. Imports (Si los hay)
+// 2. Lógica (variables, hooks, functions)
+// 3. Return -> JSX
+// 4. Export ( Nos sirve para crear un módulo)
+
+// Reglas básicas de un componente
+// * UN solo elemento padre
+// * Es recomendable que la función tenga el mismo nombre del archivo. Ej. App.jsx -> App
+
+// 02 - Componente base usando arrow functions
+
+// const App = () => {
+//   return <h1>Bienvenidos a React.js!</h1>
+// }
+
+// export default App
+
+// 03 - Componente usando múltiples líneas
+
+// const App = () => {
+//   return (
+//     <section>
+//       <h1>Hola React.js!</h1>
+//       <p>Estamos aprendiendo sobre componentes.</p>
+//     </section>
+//   )
+// }
+
+// export default App
+
+// 03.1 - Componente usando Fragments (<></>)
+
+const App = () => {
+  return (
+    <>
+      <h1>Hola React.js!</h1>
+      <p>Estamos aprendiendo sobre componentes.</p>
+    </>
+  )
+}
+
+export default App
