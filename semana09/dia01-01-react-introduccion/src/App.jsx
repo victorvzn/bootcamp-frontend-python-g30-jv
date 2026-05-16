@@ -183,8 +183,28 @@ console.log(PI)
 
 // 08 - Propiedades de un componente (Ahora el componente será reutilizable)
 
-const BievenidaPersonalizada = (props) => {
-  return <h3>Hola {props.nombre}, tu edad es {props.edad ?? '0'} años</h3>
+// const BievenidaPersonalizada = (props) => {
+//   return <h3>Hola {props.nombre}, tu edad es {props.edad ?? '0'} años</h3>
+// }
+
+// const App = () => {
+//   return (
+//     <div>
+//       <h4>Propiedades de un componente</h4>
+
+//       <BievenidaPersonalizada nombre="Keyth" edad="26" />
+//       <BievenidaPersonalizada nombre="Victor" edad="40" />
+//       <BievenidaPersonalizada nombre="Herson" />
+//     </div>
+//   )
+// }
+
+// export default App
+
+// 09 - Propiedades de un componente (Con destructuring)
+
+const BievenidaPersonalizada = ({ nombre, edad, color }) => {
+  return <h3>Hola {nombre}, tu edad es {edad ?? '0'} años, y tu color favorito es {color}</h3>
 }
 
 const App = () => {
@@ -192,7 +212,7 @@ const App = () => {
     <div>
       <h4>Propiedades de un componente</h4>
 
-      <BievenidaPersonalizada nombre="Keyth" edad="26" />
+      <BievenidaPersonalizada nombre="Keyth" edad="26" color="amarillo" />
       <BievenidaPersonalizada nombre="Victor" edad="40" />
       <BievenidaPersonalizada nombre="Herson" />
     </div>
