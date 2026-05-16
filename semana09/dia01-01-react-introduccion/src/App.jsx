@@ -121,24 +121,60 @@ console.log(PI)
 
 // 6 - Importando componentes externos
 
-import { ComponenteSaludo } from './components/ComponenteSaludo.jsx'
+// import { ComponenteSaludo } from './components/ComponenteSaludo.jsx'
 
-// TODO: Llevar el componente ComponenteDespedida a su propio archivo e importarlo aquí mismo
+// // TODO: Llevar el componente ComponenteDespedida a su propio archivo e importarlo aquí mismo
 
-function ComponenteDespedida() {
-  return (
-    <h4>Adios a todos!</h4>
-  )
-}
+// function ComponenteDespedida() {
+//   return (
+//     <h4>Adios a todos!</h4>
+//   )
+// }
+
+// const App = () => {
+//   return (
+//     <section>
+//       <h3>Componentes anidados</h3>
+
+//       <ComponenteSaludo />
+
+//       <ComponenteDespedida />
+//     </section>
+//   )
+// }
+
+// export default App
+
+// 07 - Usando expresiones con jsx -> "{}"
+
+import { LISTA_DE_FRUTAS, EDAD, curso } from './components/frutas.js'
 
 const App = () => {
+  // Lógica
+  const suma = 8 + 9
+  const nombre = 'Victor'
+
+  // Comentarios en React.js van dentro del cuerpo de la función
+  /* Otro comentario multilínea dentro el cuerpo de la función */
+
   return (
     <section>
-      <h3>Componentes anidados</h3>
+      <h1>Usando expresiones con jsx</h1>
 
-      <ComponenteSaludo />
+      <p>{suma}</p>
+      <p>{nombre}</p>
+      <p>{1 + 2 * 9 ** 2}</p>
 
-      <ComponenteDespedida />
+      <p>{`Hola ${nombre}`}</p>
+      <p>Hola {nombre}</p>
+
+      {/* Comentario en React.js dentro del JSX */}
+
+      <p>{LISTA_DE_FRUTAS}</p>
+      <p>{EDAD}</p>
+      <p>{JSON.stringify(curso)}</p>
+      <p>{curso.nombre}</p>
+      <p>{curso.nota}</p>
     </section>
   )
 }
