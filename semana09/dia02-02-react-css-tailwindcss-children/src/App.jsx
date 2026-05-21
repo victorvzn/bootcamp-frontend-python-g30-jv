@@ -1,12 +1,14 @@
 import './Card.css'
 
-function Card() {
+// Children significa: contenido hijo dentro del componente
+
+function Card({ children }) {
   return (
     <div className="card" style={{ backgroundColor: 'yellow', padding: '4px' }}>
       <h1 className="title">Hola React!</h1>
 
       <p className="description">
-        Estoy aprendiendo estilos en React
+        {children ?? 'Estoy aprendiendo estilos en React'}
       </p>
 
       <button className="button">
@@ -35,7 +37,9 @@ function CardConTailwindCSS() {
 const App = () => {
   return (
     <>
-      <Card />
+      <Card>
+        Hola desde la prop children
+      </Card>
 
       <CardConTailwindCSS />
     </>
