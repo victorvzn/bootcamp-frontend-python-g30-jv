@@ -1,4 +1,5 @@
 import { Contador } from "./components/Contador"
+import MostrarTexto from "./components/MostrarTexto"
 
 const App = () => {
   return (
@@ -11,6 +12,8 @@ const App = () => {
       <Contador />
       <Contador />
       <Contador />
+
+      <MostrarTexto />
     </div>
   )
 }
