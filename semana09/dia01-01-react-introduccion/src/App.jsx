@@ -14,11 +14,11 @@ console.log(PI)
 
 // 01 - Componente base usando function
 
-// function App() {
-//   return <h1>Bienvenidos a React.js!</h1>
-// }
+function App() {
+  return <h1>Bienvenidos a React.js!</h1>
+}
 
-// export default App
+export default App
 
 // Qué es un componente?
 // * Es una función, devuelve JSX, todo componente en su nombre empieza con mayúscula.
