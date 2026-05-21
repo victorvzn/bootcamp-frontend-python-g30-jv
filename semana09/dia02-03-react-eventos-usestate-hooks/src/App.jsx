@@ -1,3 +1,5 @@
+/* TODO: Llevar este componente Contador a un archivo externo e importalo en App.jsx */
+
 const Contador = () => {
   return (
     <div className="bg-yellow-400 p-4 m-4">
