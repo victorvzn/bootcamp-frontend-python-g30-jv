@@ -10,7 +10,7 @@ const App = () => {
     {
       id: '2',
       titulo: 'Aprender CSS',
-      completado: false
+      completado: true
     },
     {
       id: '3',
@@ -51,40 +51,28 @@ const App = () => {
       </section>
 
       <ul className="flex flex-col gap-2 p-4 w-full">
-        <li className="flex justify-between">
-          <div className="flex gap-2">
-            <input
-              type="checkbox"
-            />
+        {tareas.map(tarea => {
+          return (
+            <li className="flex justify-between" key={tarea.id}>
+              <div className="flex gap-2">
+                <input
+                  type="checkbox"
+                  checked={tarea.completado}
+                />
 
-            <span className="w-full">
-              Tarea 1
-            </span>
-          </div>
+                <span className="w-full">
+                  {tarea.titulo}
+                </span>
+              </div>
 
-          <button
-            className="cursor-pointer"
-          >
-            ❌
-          </button>
-        </li>
-        <li className="flex justify-between">
-          <div className="flex gap-2">
-            <input
-              type="checkbox"
-            />
-
-            <span className="w-full line-through">
-              Tarea 1
-            </span>
-          </div>
-
-          <button
-            className="cursor-pointer"
-          >
-            ❌
-          </button>
-        </li>
+              <button
+                className="cursor-pointer"
+              >
+                ❌
+              </button>
+            </li>
+          )
+        })}
       </ul>
 
       <pre>{JSON.stringify(tareas, null, 2)}</pre>
