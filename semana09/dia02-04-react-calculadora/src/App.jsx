@@ -54,9 +54,13 @@ const App = () => {
         <input id="inputDisplay" readonly value={numeroActual} />
 
         <div class="botones">
-          <button class="button" onClick={handleButton}>+</button>
-          <button class="button" onClick={handleButton}>-</button>
-          <button class="button" onClick={handleButton}>*</button>
+          {operaciones.map(operacion => {
+            return (
+              <button class="button" onClick={handleButton}>
+                {operacion}
+              </button>
+            )
+          })}
 
           <button class="button" onClick={handleButton}>7</button>
           <button class="button" onClick={handleButton}>8</button>
@@ -69,8 +73,13 @@ const App = () => {
           <button class="button" onClick={handleButton}>3</button>
           <button class="button" onClick={handleButton}>0</button>
           
-          <button class="button" onClick={handleButton}>CE</button>
-          <button class="button" onClick={handleButton}>=</button>
+          {acciones.map(accion => {
+            return (
+              <button class="button" onClick={handleButton}>
+                {accion}
+              </button>
+            )
+          })}
         </div>
       </section>
     </main>
