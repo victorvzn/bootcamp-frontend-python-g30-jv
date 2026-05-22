@@ -1,6 +1,8 @@
 const App = () => {
   return (
-    <div className="text-6xl">App</div>
+    <main>
+      <h1 className="text-xl text-center">Todo App + React + TailwindCSS</h1>
+    </main>
   )
 }
 
