@@ -47,13 +47,20 @@ const App = () => {
   }
 
   return (
-    <main>
-      <h1>Calculadora con React</h1>
+    <main className="bg-blue-400 w-85 mx-auto mt-8 p-4 rounded-md shadow-md">
+      <h1 className="text-2xl font-bold text-center mb-4">
+        Calculadora con React
+      </h1>
 
-      <section>
-        <input id="inputDisplay" readonly value={numeroActual} />
+      <section className="flex flex-col gap-4">
+        <input
+          className="border p-2 text-right text-3xl font-bold rounded-md bg-slate-50"
+          id="inputDisplay"
+          readonly
+          value={numeroActual}
+        />
 
-        <div class="botones">
+        <div className="grid grid-cols-3 gap-4">
           {operaciones.map(operacion => {
             return (
               <button class="button" onClick={handleButton}>
@@ -62,16 +69,13 @@ const App = () => {
             )
           })}
 
-          <button class="button" onClick={handleButton}>7</button>
-          <button class="button" onClick={handleButton}>8</button>
-          <button class="button" onClick={handleButton}>9</button>
-          <button class="button" onClick={handleButton}>4</button>
-          <button class="button" onClick={handleButton}>5</button>
-          <button class="button" onClick={handleButton}>6</button>
-          <button class="button" onClick={handleButton}>1</button>
-          <button class="button" onClick={handleButton}>2</button>
-          <button class="button" onClick={handleButton}>3</button>
-          <button class="button" onClick={handleButton}>0</button>
+          {numeros.map(numero => {
+            return (
+              <button class="button" onClick={handleButton}>
+                {numero}
+              </button>
+            )
+          })}
           
           {acciones.map(accion => {
             return (
