@@ -20,16 +20,40 @@ const App = () => {
   ]
 
   const [tareas, setTareas] = useState(DEFAULT_TAREAS)
+  const [input, setInput] =  useState('')
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    // 01 - Crear una nueva tarea en el estado tareas
+
+    const nuevaTarea = {
+      id: crypto.randomUUID(),
+      titulo: input,
+      completado: false
+    }
+
+    console.log({nuevaTarea})
+
+    setTareas([...tareas, nuevaTarea])
+
+    setInput('')
+  }
 
   return (
     <main className="flex flex-col items-center gap-4">
       <h1 className="text-xl text-center">Todo App + React + TailwindCSS</h1>
 
-      <form className="flex gap-2 w-full px-4">
+      <form
+        className="flex gap-2 w-full px-4"
+        onSubmit={handleSubmit}
+      >
         <input
           type="text"
           className="border p-1 w-full"
           placeholder="¿Qué quieres hacer?"
+          onChange={(event) => setInput(event.target.value)}
+          value={input}
         />
         <input
           type="submit"
