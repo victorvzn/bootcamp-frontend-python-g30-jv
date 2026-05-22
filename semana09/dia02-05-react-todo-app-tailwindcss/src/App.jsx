@@ -40,6 +40,18 @@ const App = () => {
     setInput('')
   }
 
+  const tareasCompletadas = tareas.filter(tarea => tarea.completado)
+
+  const handleLimpiarTareasCompletadas = () => {
+    // TODO: 1. Limpiar las tareas compleatadas usando el estado tareas
+    console.log('Completando tareas...')
+  }
+
+  const handleRemoverTarea = (id) => {
+    // TODO: 2. Remover la tarea seleccionado por su id acualizando el estado tareas
+    console.log('Removiendo tarea con el id', id)
+  }
+
   return (
     <main className="flex flex-col items-center gap-4">
       <h1 className="text-xl text-center">Todo App + React + TailwindCSS</h1>
@@ -64,11 +76,12 @@ const App = () => {
 
       <section className="flex justify-between items-center gap-4 px-4 w-full">
         <span>
-          0 de 0 completadas
+          {tareasCompletadas.length} de {tareas.length} completadas
         </span>
 
         <button
           className="bg-green-400 p-2"
+          onClick={handleLimpiarTareasCompletadas}
         >
           Limpiar completadas
         </button>
@@ -84,6 +97,8 @@ const App = () => {
                   checked={tarea.completado}
                 />
 
+                {/* TODO: 3. Tachar el título de la tarea si es completado. La clase line-though solo debe añadirse al className si tarea.compleatado es true */}
+
                 <span className="w-full">
                   {tarea.titulo}
                 </span>
@@ -91,6 +106,7 @@ const App = () => {
 
               <button
                 className="cursor-pointer"
+                onClick={() => handleRemoverTarea(tarea.id)}
               >
                 ❌
               </button>
