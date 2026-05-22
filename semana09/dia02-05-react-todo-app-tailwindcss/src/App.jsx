@@ -46,6 +46,23 @@ const App = () => {
             ❌
           </button>
         </li>
+        <li className="flex justify-between">
+          <div className="flex gap-2">
+            <input
+              type="checkbox"
+            />
+
+            <span className="w-full line-through">
+              Tarea 1
+            </span>
+          </div>
+
+          <button
+            className="cursor-pointer"
+          >
+            ❌
+          </button>
+        </li>
       </ul>
     </main>
   )
