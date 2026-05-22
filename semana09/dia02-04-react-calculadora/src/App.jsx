@@ -56,7 +56,7 @@ const App = () => {
         <input
           className="border p-2 text-right text-3xl font-bold rounded-md bg-slate-50"
           id="inputDisplay"
-          readonly
+          readOnly
           value={numeroActual}
         />
 
@@ -66,6 +66,7 @@ const App = () => {
               <button
                 className="bg-red-400 p-2 rounded-md hover:bg-red-500 duration-300 text-black text-xl font-bold"
                 onClick={handleButton}
+                key={operacion}
               >
                 {operacion}
               </button>
@@ -77,6 +78,7 @@ const App = () => {
               <button
                 className="bg-amber-400 p-2 rounded-md hover:bg-amber-500 duration-300 text-black text-xl font-bold"
                 onClick={handleButton}
+                key={numero}
               >
                 {numero}
               </button>
@@ -88,6 +90,7 @@ const App = () => {
               <button
                 className="bg-green-400 p-2 rounded-md hover:bg-green-500 duration-300 text-black text-xl font-bold"
                 onClick={handleButton}
+                key={accion}
               >
                 {accion}
               </button>
