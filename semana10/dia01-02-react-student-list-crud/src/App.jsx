@@ -20,20 +20,37 @@ const App = () => {
   ]
 
   const [students, setStudents] = useState(DEFAULT_STUDENTS)
+  const [form, setForm] = useState({
+    id: '',
+    name: '',
+    city: ''
+  })
 
   const handleSave = (event) => {
     event.preventDefault() // Evitamos que la página se actualice
 
     // isNew
     const newStudent = {
-      name: '???',
-      city: '???',
+      name: form.name,
+      city: form.city,
       id: crypto.randomUUID()
     }
 
     const updatedStudens = [...students, newStudent]
 
     setStudents(updatedStudens)
+
+    setForm({
+      id: '',
+      name: '',
+      city: ''
+    })
+  }
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+
+    setForm({ ...form, [name]: value })
   }
 
   return (
@@ -52,6 +69,8 @@ const App = () => {
             name="name"
             placeholder="Ex. Victor Villazón"
             required
+            onChange={handleChange}
+            value={form.name}
           />
         </label>
 
@@ -63,6 +82,8 @@ const App = () => {
             name="city"
             placeholder="Ex. Chiclayo"
             required
+            onChange={handleChange}
+            value={form.city}
           />
         </label>
 
@@ -79,6 +100,8 @@ const App = () => {
           />
         </div>
       </form>
+
+      <pre>{JSON.stringify(form)}</pre>
 
       <h2 className="text-center text-slate-700 font-bold my-4">Student list</h2>
 
