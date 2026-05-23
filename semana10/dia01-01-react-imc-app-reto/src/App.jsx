@@ -2,10 +2,36 @@ import { useState } from "react"
 
 const App = () => {
   const [peso, setPeso] = useState(80)
-  const [altura, setAltura] = useState(80)
+  const [altura, setAltura] = useState(180)
 
   const handlePeso = (event) => {
     setPeso(event.target.value)
+  }
+
+  const handleAltura = (event) => {
+    setAltura(event.target.value)
+  }
+
+  const imc = peso / ((altura / 100) ** 2)
+
+  const imcDecimal = imc.toFixed(2)
+
+  const imcResultado = () => {
+    let resultado = ''
+
+    if (imc < 18.5) {
+      resultado = 'Baja'
+    } else if (imc > 18.5 && imc <= 24.9) {
+      resultado = 'Normal'
+    } else if (imc > 25 && imc <= 29.9) {
+      resultado = 'Sobrepeso'
+    } else if (imc > 30) {
+      resultado = 'Obeso'
+    } else {
+      resultado = 'Datos incorrectos'
+    }
+
+    return resultado
   }
 
   return (
@@ -24,17 +50,19 @@ const App = () => {
       </div>
 
       <div>
-        <p>Altura: 0cm</p>
+        <p>Altura: {altura} cm</p>
         <input
           type="range"
           min="50"
           max="200"
+          onChange={handleAltura}
+          value={altura}
         />
       </div>
 
-      <p className="font-bold">Tu IMC es 0</p>
+      <p className="font-bold">Tu IMC es {imcDecimal}</p>
 
-      <p className="font-bold text-2xl">Estado de IMC: 0</p>
+      <p className="font-bold text-2xl">Estado de IMC: {imcResultado()}</p>
     </section>
   )
 }
