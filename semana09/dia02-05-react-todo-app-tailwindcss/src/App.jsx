@@ -53,6 +53,10 @@ const App = () => {
   const handleRemoverTarea = (id) => {
     // TODO: 2. Remover la tarea seleccionado por su id acualizando el estado tareas
     console.log('Removiendo tarea con el id', id)
+
+    const tareasActualizadas = tareas.filter(tarea => tarea.id !== id)
+
+    setTareas(tareasActualizadas)
   }
 
   return (
