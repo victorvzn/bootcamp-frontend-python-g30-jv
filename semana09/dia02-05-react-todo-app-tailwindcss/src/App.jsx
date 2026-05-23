@@ -106,7 +106,7 @@ const App = () => {
 
                 {/* TODO: 3. Tachar el título de la tarea si es completado. La clase line-though solo debe añadirse al className si tarea.compleatado es true */}
 
-                <span className="w-full">
+                <span className={ tarea.completado ? 'line-through': '' }>
                   {tarea.titulo}
                 </span>
               </div>
