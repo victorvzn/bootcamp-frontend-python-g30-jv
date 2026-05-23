@@ -58,6 +58,22 @@ const App = () => {
 
     setTareas(tareasActualizadas)
   }
+  
+  const handleCompletado = (id) => {
+    console.log(id)
+    const tareasActualizadas = tareas.map(tarea => {
+      if (tarea.id === id) {
+        return {
+          ...tarea,
+          completado: !tarea.completado
+        }
+      }
+
+      return tarea
+    })
+
+    setTareas(tareasActualizadas)
+  }
 
   return (
     <main className="flex flex-col items-center gap-4">
@@ -102,6 +118,7 @@ const App = () => {
                 <input
                   type="checkbox"
                   checked={tarea.completado}
+                  onChange={() => handleCompletado(tarea.id)}
                 />
 
                 {/* TODO: 3. Tachar el título de la tarea si es completado. La clase line-though solo debe añadirse al className si tarea.compleatado es true */}
