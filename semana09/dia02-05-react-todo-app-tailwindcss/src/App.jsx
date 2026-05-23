@@ -45,6 +45,9 @@ const App = () => {
   const handleLimpiarTareasCompletadas = () => {
     // TODO: 1. Limpiar las tareas compleatadas usando el estado tareas
     console.log('Completando tareas...')
+    const tareasSinCompletar = tareas.filter(tarea => tarea.completado === false)
+
+    setTareas(tareasSinCompletar)
   }
 
   const handleRemoverTarea = (id) => {
