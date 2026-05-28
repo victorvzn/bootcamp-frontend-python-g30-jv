@@ -1,13 +1,9 @@
 import { useEffect, useState } from "react"
 
+import { fetchStudents } from "./services/students"
+
 // useEffect, nos ayuda a controlar el ciclo de vida de un componente.
 // Creación, actualización y eliminación DEL COMPONENTE.
-
-const fetchStudents = async () => {
-  const response = await fetch('https://6a178e231878294b597b9447.mockapi.io/api/v1/students')
-
-  return await response.json()
-}
 
 const App = () => {
   const [students, setStudents] = useState([])
