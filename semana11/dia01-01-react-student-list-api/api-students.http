@@ -1,0 +1,14 @@
+### Listar estudiantes
+GET https://6a178e231878294b597b9447.mockapi.io/api/v1/students
+
+### Crear un estudiante
+POST https://6a178e231878294b597b9447.mockapi.io/api/v1/students
+Content-Type: application/json
+
+{
+  "name": "Victor",
+  "city": "Chiclayo"
+}
+
+### Obtener un estudiante con su id
+GET https://6a178e231878294b597b9447.mockapi.io/api/v1/students/1
