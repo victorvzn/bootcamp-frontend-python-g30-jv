@@ -1,25 +1,29 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
+// useEffect, nos ayuda a controlar el ciclo de vida de un componente.
+// Creación, actualización y eliminación DEL COMPONENTE.
+
+const fetchStudents = async () => {
+  const response = await fetch('https://6a178e231878294b597b9447.mockapi.io/api/v1/students')
+
+  return await response.json()
+}
 
 const App = () => {
-  const DEFAULT_STUDENTS = [
-    {
-      id: '1',
-      name: 'Bulma',
-      city: 'Chiclayo'
-    },
-    {
-      id: '2',
-      name: 'Goku',
-      city: 'Trujillo'
-    },
-    {
-      id: '2',
-      name: 'Vegeta',
-      city: 'Lima'
-    }
-  ]
+  const [students, setStudents] = useState([])
+  const [contador, setContador] = useState(0)
 
-  const [students, setStudents] = useState(DEFAULT_STUDENTS)
+  // useEffect(Función, dependencias)
+  useEffect(() => {
+    console.log('CICLO DE VIDA: CREACIÓN y ACTUALIZACIÓN')
+  }, [contador]) // Se ejecuta el useEffect al cargar el conponente la primera vez
+
+  useEffect(() => {
+    console.log('LA PRIMERA VEZ')
+    fetchStudents() // Devuelve una promesa
+      .then(data => setStudents(data))
+  }, []) // Este useEffect se ejecuta si o si la primera vez
+
   const [form, setForm] = useState({
     id: '',
     name: '',
@@ -54,7 +58,7 @@ const App = () => {
   }
 
   return (
-    <main class="w-96 mx-auto border border-slate-400 rounded-lg mt-6 p-3">
+    <main className="w-96 mx-auto border border-slate-400 rounded-lg mt-6 p-3">
       <h1 className="text-2xl text-center text-slate-700 font-bold mb-4">Student CRUD</h1>
 
       <form
@@ -89,12 +93,12 @@ const App = () => {
 
         <div className="flex gap-4">
           <input
-            class="bg-blue-700 text-white hover:bg-blue-800 font-medium rounded-lg text-sm w-full px-5 py-3 text-center cursor-pointer"
+            className="bg-blue-700 text-white hover:bg-blue-800 font-medium rounded-lg text-sm w-full px-5 py-3 text-center cursor-pointer"
             type="submit"
             value="Save"
           />
           <input
-            class="bg-green-700 text-white hover:bg-green-800 font-medium rounded-lg text-sm w-full px-5 py-3 text-center"
+            className="bg-green-700 text-white hover:bg-green-800 font-medium rounded-lg text-sm w-full px-5 py-3 text-center"
             type="reset"
             value="Clear"
           />
@@ -129,6 +133,8 @@ const App = () => {
           )
         })}
       </section>
+
+      <button className="border p-4" onClick={() => setContador(contador + 1)}>+1: {contador}</button>
     </main>
   )
 }
