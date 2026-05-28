@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import { fetchStudents, createStudent, getStudentById, updateStudent } from "./services/students"
+import { fetchStudents, createStudent, getStudentById, updateStudent, removeStudent } from "./services/students"
 
 // useEffect, nos ayuda a controlar el ciclo de vida de un componente.
 // Creación, actualización y eliminación DEL COMPONENTE.
@@ -78,7 +78,11 @@ const App = () => {
   const handleRemove = async (id) => {
     // TODO: Implementar el botón eliiminar de cada estudiante
 
-    console.log(id)
+    const reponse = await removeStudent(id)
+
+    const dataStudents = await fetchStudents()
+
+    setStudents(dataStudents) 
   }
 
   return (
