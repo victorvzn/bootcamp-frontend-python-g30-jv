@@ -29,19 +29,26 @@ const App = () => {
   const handleSave = async (event) => {
     event.preventDefault() // Evitamos que la página se actualice
 
-    // isNew
-    const newStudent = {
-      name: form.name,
-      city: form.city,
+    const isNew = form.id === ''
+
+    if (isNew) {
+      const newStudent = {
+        name: form.name,
+        city: form.city,
+      }
+
+      const response = await createStudent(newStudent)
+
+      console.log(response)
+
+      const dataStudents = await fetchStudents()
+
+      setStudents(dataStudents)
+    } else {
+      // Aquí editamos un estudiante existente
+      // TODO: Implementar el guardado del estudiante cuando el estudiante ya existe
+
     }
-
-    const response = await createStudent(newStudent)
-
-    console.log(response)
-
-    const dataStudents = await fetchStudents()
-
-    setStudents(dataStudents)
 
     setForm({
       id: '',
