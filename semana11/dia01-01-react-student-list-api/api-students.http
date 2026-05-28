@@ -12,3 +12,16 @@ Content-Type: application/json
 
 ### Obtener un estudiante con su id
 GET https://6a178e231878294b597b9447.mockapi.io/api/v1/students/1
+
+### Actualizar los datos de un estudiante con su id
+PUT https://6a178e231878294b597b9447.mockapi.io/api/v1/students/1
+Content-Type: application/json
+
+{
+  "name": "Victor Modificado",
+  "city": "Chiclayo Modificado"
+}
+
+### Eliminar un estudiante con su id
+DELETE https://6a178e231878294b597b9447.mockapi.io/api/v1/students/1
+
