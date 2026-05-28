@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import { fetchStudents, createStudent, getStudentById } from "./services/students"
+import { fetchStudents, createStudent, getStudentById, updateStudent } from "./services/students"
 
 // useEffect, nos ayuda a controlar el ciclo de vida de un componente.
 // Creación, actualización y eliminación DEL COMPONENTE.
@@ -47,7 +47,11 @@ const App = () => {
     } else {
       // Aquí editamos un estudiante existente
       // TODO: Implementar el guardado del estudiante cuando el estudiante ya existe
+      const response = await updateStudent(form)
 
+      const dataStudents = await fetchStudents()
+
+      setStudents(dataStudents) 
     }
 
     setForm({
