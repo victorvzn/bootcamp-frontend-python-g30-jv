@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import { fetchStudents, createStudent } from "./services/students"
+import { fetchStudents, createStudent, getStudentById } from "./services/students"
 
 // useEffect, nos ayuda a controlar el ciclo de vida de un componente.
 // Creación, actualización y eliminación DEL COMPONENTE.
@@ -59,7 +59,9 @@ const App = () => {
   const handleRead = async (id) => {
     // TODO: Implementar el llamado al endpoint student para que actualice el formulario con los datos del estudiante con su id.
 
-    console.log(id)
+    const dataStudent = await getStudentById(id)
+
+    setForm(dataStudent)
   }
 
   return (
