@@ -75,6 +75,12 @@ const App = () => {
     setForm(dataStudent)
   }
 
+  const handleRemove = async (id) => {
+    // TODO: Implementar el botón eliiminar de cada estudiante
+
+    console.log(id)
+  }
+
   return (
     <main className="w-96 mx-auto border border-slate-400 rounded-lg mt-6 p-3">
       <h1 className="text-2xl text-center text-slate-700 font-bold mb-4">Student CRUD</h1>
@@ -145,7 +151,7 @@ const App = () => {
               <div className="text-left">{student.city}</div>
               <div className="flex gap-2">
                 <button onClick={() => handleRead(student.id)}>✏</button>
-                <button>❌</button>
+                <button onClick={() => handleRemove(student.id)}>❌</button>
               </div>
             </div>
           )
