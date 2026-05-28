@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 
 import { fetchStudents, createStudent, getStudentById, updateStudent, removeStudent } from "./services/students"
 
+import Swal from 'sweetalert2'
+
 // useEffect, nos ayuda a controlar el ciclo de vida de un componente.
 // Creación, actualización y eliminación DEL COMPONENTE.
 
@@ -76,13 +78,25 @@ const App = () => {
   }
 
   const handleRemove = async (id) => {
-    // TODO: Implementar el botón eliiminar de cada estudiante
+    // TODO: Implementar el botón eliminar de cada estudiante
 
-    const reponse = await removeStudent(id)
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        const reponse = await removeStudent(id)
 
-    const dataStudents = await fetchStudents()
+        const dataStudents = await fetchStudents()
 
-    setStudents(dataStudents) 
+        setStudents(dataStudents) 
+      }
+    });
   }
 
   return (
