@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import { fetchStudents } from "./services/students"
+import { fetchStudents, createStudent } from "./services/students"
 
 // useEffect, nos ayuda a controlar el ciclo de vida de un componente.
 // Creación, actualización y eliminación DEL COMPONENTE.
@@ -26,19 +26,22 @@ const App = () => {
     city: ''
   })
 
-  const handleSave = (event) => {
+  const handleSave = async (event) => {
     event.preventDefault() // Evitamos que la página se actualice
 
     // isNew
     const newStudent = {
       name: form.name,
       city: form.city,
-      id: crypto.randomUUID()
     }
 
-    const updatedStudens = [...students, newStudent]
+    const response = await createStudent(newStudent)
 
-    setStudents(updatedStudens)
+    console.log(response)
+
+    const dataStudents = await fetchStudents()
+
+    setStudents(dataStudents)
 
     setForm({
       id: '',
