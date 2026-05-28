@@ -56,6 +56,12 @@ const App = () => {
     setForm({ ...form, [name]: value })
   }
 
+  const handleRead = async (id) => {
+    // TODO: Implementar el llamado al endpoint student para que actualice el formulario con los datos del estudiante con su id.
+
+    console.log(id)
+  }
+
   return (
     <main className="w-96 mx-auto border border-slate-400 rounded-lg mt-6 p-3">
       <h1 className="text-2xl text-center text-slate-700 font-bold mb-4">Student CRUD</h1>
@@ -125,7 +131,7 @@ const App = () => {
               <div className="text-left">{student.name}</div>
               <div className="text-left">{student.city}</div>
               <div className="flex gap-2">
-                <button>✏</button>
+                <button onClick={() => handleRead(student.id)}>✏</button>
                 <button>❌</button>
               </div>
             </div>
