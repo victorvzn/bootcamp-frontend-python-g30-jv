@@ -1,18 +1,9 @@
 // TODO: Listar los productos de la siguiente rest api: https://dummyjson.com/products. Usando un useState, useEffect.
 
-import { useEffect, useState } from "react"
-
-import { fetchProducts } from "../services/products"
+import { useProducts } from "../hooks/useProducts"
 
 const ProductList = () => {
-  const [products, setProducts] = useState([])
-
-  useEffect(() => {
-    console.log('Me ejecuto solo la primera vez')
-    fetchProducts()
-      .then(data => setProducts(data.products))
-  }, [])
-
+  const { products } = useProducts()
 
   return (
     <div>
