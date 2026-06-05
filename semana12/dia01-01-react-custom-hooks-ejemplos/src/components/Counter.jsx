@@ -1,21 +1,6 @@
-import { useState } from "react"
-
-export const useCounter = () => {
-  const [count, setCount] = useState(0)
-
-  const decrement = () => setCount(count - 1)
-
-  const increment = () => setCount(count + 1)
-
-  return {
-    count,
-    decrement,
-    increment
-  }
-}
+import { useCounter } from "../hooks/useCounter"
 
 // DEPUÉS DE USAR CUSTOM HOOKS
-
 const Counter = () => {
   const { count, decrement, increment } = useCounter()
 
@@ -35,7 +20,6 @@ const Counter = () => {
 export default Counter
 
 // ANTES DE USAR CUSTOM HOOKS USANDO USESTATE
-
 // const Counter = () => {
 //   const [count, setCount] = useState(0)
 
