@@ -2,11 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-const fetchProducts = async () => {
-  const response = await fetch('https://dummyjson.com/products')
-
-  return await response.json()
-}
+import { fetchProducts } from "../services/products"
 
 const ProductList = () => {
   const [products, setProducts] = useState([])
