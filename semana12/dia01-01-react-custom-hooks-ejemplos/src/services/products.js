@@ -1,5 +1,5 @@
 export const fetchProducts = async () => {
-  const response = await fetch('https://dummyjson.com/products?delay=1000')
+  const response = await fetch('https://dummyjson.com/products?delay=2000')
 
   return await response.json()
 }

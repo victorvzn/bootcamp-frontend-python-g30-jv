@@ -3,7 +3,16 @@
 import { useProducts } from "../hooks/useProducts"
 
 const ProductList = () => {
-  const { products } = useProducts()
+  const { products, loading } = useProducts()
+
+  // Renderizado condicional
+  if(loading) {
+    return (
+      <div>
+        Cargando productos...
+      </div>
+    )
+  }
 
   return (
     <div>
