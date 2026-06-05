@@ -1,4 +1,5 @@
 import Counter from "./components/Counter"
+import ProductList from "./components/ProductList"
 
 const App = () => {
   return (
@@ -7,7 +8,9 @@ const App = () => {
 
       <Counter />
 
-      {/* <ProductList /> */}
+      <hr />
+
+      <ProductList />
     </main>
   )
 }
