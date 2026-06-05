@@ -1,6 +1,6 @@
 const App = () => {
   return (
-    <div className="text-red-500">App</div>
+    <div className="text-red-500">React + React router</div>
   )
 }
 
