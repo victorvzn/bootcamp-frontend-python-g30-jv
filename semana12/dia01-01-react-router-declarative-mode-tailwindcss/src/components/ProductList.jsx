@@ -1,5 +1,6 @@
 // TODO: Listar los productos de la siguiente rest api: https://dummyjson.com/products. Usando un useState, useEffect.
 
+import { Link } from "react-router"
 import { useProducts } from "../hooks/useProducts"
 
 const ProductList = () => {
@@ -21,10 +22,15 @@ const ProductList = () => {
       <ul>
         {products.map(product => {
           return (
-            <li>
+            <li key={product.id}>
               <h4>{product.title}</h4>
               <p>{product.description}</p>
               <img src={product.thumbnail} />
+              <Link
+                to={`/products/${product.id}`}
+              >
+                Ver más
+              </Link>
             </li>
           )
         })}
