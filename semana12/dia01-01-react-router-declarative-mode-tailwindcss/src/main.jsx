@@ -4,12 +4,14 @@ import './index.css'
 import App from './App.jsx'
 
 import { BrowserRouter, Route, Routes } from 'react-router'
+import HomePage from './pages/HomePage.jsx'
+import PruebaPage from './pages/PruebaPage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
-      <Route path='/' element={<h1>HOME PAGE</h1>} />
-      <Route path='/prueba' element={<h1>PRUEBA PAGE</h1>} />
+      <Route path='/' element={<HomePage />} />
+      <Route path='/prueba' element={<PruebaPage />} />
     </Routes>
   </BrowserRouter>
 )
