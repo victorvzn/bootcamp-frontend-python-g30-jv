@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router"
+import { Link, useParams, useNavigate } from "react-router"
 
 import { getProduct } from '../services/products'
 
 const ProductPage = () => {
   const { id } = useParams()
+  const navigate = useNavigate()
 
   const [product, setProduct] = useState()
 
@@ -15,13 +16,20 @@ const ProductPage = () => {
       .then(data => setProduct(data))
   }, [])
 
+  const handleBackProductsPage = () => {
+    navigate('/products')
+  }
+
   return (
     <main>
+      <Link to='/products'>Regresar al listado de productos</Link>
 
-      <h1>Product detail #{id}</h1>
+      <button onClick={handleBackProductsPage}>Regresar al listado de productos</button>
+
+      <h1 className="text-xl font-bold">Product detail #{id}</h1>
 
       <ul>
-        <li>{product?.title}</li>
+        <li className="font-bold">{product?.title}</li>
         <li>{product?.description}</li>
         <li>S/ {product?.price}</li>
         <li>{product?.brand}</li>
