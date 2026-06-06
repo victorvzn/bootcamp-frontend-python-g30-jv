@@ -12,6 +12,8 @@ import LayoutBase from './layouts/LayoutBase.jsx'
 
 // TODO: Listar los personajes de la siguiente url https://rickandmortyapi.com/api/character
 
+// TODO: Añadir un template para las rutas 'products' y el detalle de los productos.
+
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
