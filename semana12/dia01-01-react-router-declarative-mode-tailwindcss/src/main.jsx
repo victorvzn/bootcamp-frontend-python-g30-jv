@@ -8,14 +8,18 @@ import HomePage from './pages/HomePage.jsx'
 import PruebaPage from './pages/PruebaPage.jsx'
 import ProductsPage from './pages/ProductsPage.jsx'
 import ProductPage from './pages/ProductPage.jsx'
+import LayoutBase from './layouts/LayoutBase.jsx'
 
 // TODO: Listar los personajes de la siguiente url https://rickandmortyapi.com/api/character
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
-      <Route path='/' element={<HomePage />} />
-      <Route path='/prueba' element={<PruebaPage />} />
+      <Route element={<LayoutBase />}>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/prueba' element={<PruebaPage />} />
+      </Route>
+
       <Route path='/products' element={<ProductsPage />} />
       <Route path='/products/:id' element={<ProductPage />} />
     </Routes>
