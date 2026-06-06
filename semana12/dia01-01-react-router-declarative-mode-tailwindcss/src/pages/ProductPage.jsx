@@ -21,11 +21,11 @@ const ProductPage = () => {
       <h1>Product detail #{id}</h1>
 
       <ul>
-        <li>{product.title}</li>
-        <li>{product.description}</li>
-        <li>S/ {product.price}</li>
-        <li>{product.brand}</li>
-        <li><img src={product.thumbnail} /></li>
+        <li>{product?.title}</li>
+        <li>{product?.description}</li>
+        <li>S/ {product?.price}</li>
+        <li>{product?.brand}</li>
+        <li><img src={product?.thumbnail} /></li>
       </ul>
 
       <pre>{JSON.stringify(product, null, 2)}</pre>
