@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import Counter from "./components/Counter"
 import { useState } from "react"
+import ProductList from "./components/ProductList"
 
 const App = () => {
   const [products, setProducts] = useState([])
