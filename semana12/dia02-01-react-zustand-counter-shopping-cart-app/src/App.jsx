@@ -5,6 +5,7 @@ const App = () => {
     <div className="font-bold">
       
       <Counter />
+      <Counter />
     </div>
   )
 }
