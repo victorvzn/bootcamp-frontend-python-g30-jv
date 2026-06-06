@@ -1,6 +1,10 @@
+import { useParams } from "react-router"
+
 const ProductPage = () => {
+  const { id } = useParams()
+
   return (
-    <div>ProductPage</div>
+    <div>ProductPage {id}</div>
   )
 }
 
