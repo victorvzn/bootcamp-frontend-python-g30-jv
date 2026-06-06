@@ -1,5 +1,9 @@
 import { useState } from "react"
 
+
+
+// ANTES: Antes de usar zustand estamos usando useState
+
 const Counter = () => {
   const [count, setCount] = useState(9)
 
